@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Yavuz Klima ve Beyaz Eşya Servis | Mersin Klima Servisi</title>
+  <meta name="description" content="Mersin klima servisi ve beyaz eşya teknik servis. Klima bakım, montaj, kurulum ve onarım hizmetleri. Mezitli, Yenişehir, Akdeniz ve Toroslar." />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --red: #d71920;
+      --red-dark: #b51218;
+      --black: #111111;
+      --text: #171717;
+      --muted: #6d6d6d;
+      --light: #f5f5f3;
+      --white: #ffffff;
+      --line: #dededb;
+      --soft-red: #fff1f1;
+      --max: 1240px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--white);
+      color: var(--text);
+      font-family: "Space Grotesk", sans-serif;
+      overflow-x: hidden;
+    }
+
+    body::selection {
+      background: var(--red);
+      color: white;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: auto;
+    }
+
+    .mono {
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    /* ---------------- NAV ---------------- */
+
+    nav {
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255,255,255,.9);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid transparent;
+      transition: .3s;
+    }
+
+    nav.scrolled {
+      border-color: var(--line);
+    }
+
+    .nav-inner {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 700;
+      letter-spacing: -.04em;
+    }
+
+    .brand-mark {
+      width: 33px;
+      height: 33px;
+      background: var(--red);
+      display: grid;
+      place-items: center;
+      position: relative;
+    }
+
+    .brand-mark::after {
+      content: "";
+      width: 11px;
+      height: 11px;
+      background: white;
+      transform: rotate(45deg);
+    }
+
+    .brand-sub {
+      color: #777;
+      font-family: "DM Mono";
+      font-size: 9px;
+      letter-spacing: .1em;
+      margin-left: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      font-size: 13px;
+    }
+
+    .nav-links a {
+      color: #555;
+      transition: .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--red);
+    }
+
+    .nav-cta {
+      background: var(--red);
+      color: white;
+      padding: 12px 18px;
+      border-radius: 3px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: .25s;
+    }
+
+    .nav-cta:hover {
+      background: var(--red-dark);
+      transform: translateY(-2px);
+    }
+
+    /* ---------------- HERO ---------------- */
+
+    .hero {
+      min-height: 100vh;
+      padding-top: 140px;
+      padding-bottom: 80px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.025) 1px, transparent 1px),
+        linear-gradient(rgba(0,0,0,.025) 1px, transparent 1px);
+      background-size: 80px 80px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--red);
+      margin-bottom: 25px;
+    }
+
+    .eyebrow-line {
+      width: 32px;
+      height: 2px;
+      background: var(--red);
+    }
+
+    h1 {
+      font-size: clamp(60px, 8vw, 110px);
+      line-height: .84;
+      letter-spacing: -.08em;
+      font-weight: 600;
+      max-width: 850px;
+    }
+
+    h1 span {
+      color: var(--red);
+    }
+
+    .hero-copy {
+      max-width: 530px;
+      margin-top: 34px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      min-height: 52px;
+      padding: 0 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 3px;
+      transition: .3s;
+    }
+
+    .btn-red {
+      background: var(--red);
+      color: white;
+    }
+
+    .btn-red:hover {
+      background: var(--red-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(215,25,32,.18);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--line);
+      background: white;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--red);
+      color: var(--red);
+      transform: translateY(-3px);
+    }
+
+    /* ---------------- HERO VISUAL ---------------- */
+
+    .hero-visual {
+      height: 520px;
+      position: relative;
+    }
+
+    .visual-frame {
+      position: absolute;
+      inset: 35px 0 0 35px;
+      border: 1px solid var(--line);
+      background: #eeeeeb;
+      overflow: hidden;
+    }
+
+    .visual-frame::before {
+      content: "KLİMA / 01";
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      font: 10px "DM Mono";
+      color: #777;
+      letter-spacing: .1em;
+      z-index: 2;
+    }
+
+    .visual-frame::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      right: -100px;
+      bottom: -100px;
+      border: 1px solid rgba(215,25,32,.2);
+      border-radius: 50%;
+    }
+
+    /* abstract AC illustration */
+
+    .ac-unit {
+      position: absolute;
+      width: 78%;
+      height: 170px;
+      top: 125px;
+      left: 11%;
+      background: linear-gradient(145deg,#fff,#d8d8d5);
+      border: 1px solid #c9c9c5;
+      border-radius: 18px 18px 8px 8px;
+      box-shadow: 0 30px 50px rgba(0,0,0,.12);
+      transform: rotate(-4deg);
+      animation: floating 5s ease-in-out infinite;
+    }
+
+    .ac-unit::before {
+      content: "YAVUZ";
+      position: absolute;
+      right: 30px;
+      top: 25px;
+      font: 10px "DM Mono";
+      letter-spacing: .14em;
+      color: #777;
+    }
+
+    .ac-unit::after {
+      content: "";
+      position: absolute;
+      left: 35px;
+      right: 35px;
+      bottom: 30px;
+      height: 4px;
+      background: #c8c8c5;
+      box-shadow:
+        0 9px 0 #d2d2cf,
+        0 18px 0 #d9d9d6;
+    }
+
+    .air {
+      position: absolute;
+      width: 4px;
+      height: 80px;
+      background: linear-gradient(to bottom, rgba(215,25,32,.4), transparent);
+      bottom: 35px;
+      border-radius: 5px;
+      animation: air 2.5s infinite ease-in-out;
+    }
+
+    .air:nth-child(1) { left: 35%; animation-delay: .2s; }
+    .air:nth-child(2) { left: 48%; animation-delay: .5s; }
+    .air:nth-child(3) { left: 61%; animation-delay: .8s; }
+
+    @keyframes floating {
+      0%,100% { transform: rotate(-4deg) translateY(0); }
+      50% { transform: rotate(-2deg) translateY(-12px); }
+    }
+
+    @keyframes air {
+      0%,100% {
+        opacity: .2;
+        transform: translateY(0);
+      }
+      50% {
+        opacity: .7;
+        transform: translateY(15px);
+      }
+    }
+
+    .visual-label {
+      position: absolute;
+      bottom: 30px;
+      left: -5px;
+      background: var(--red);
+      color: white;
+      padding: 22px 27px;
+      width: 230px;
+      z-index: 3;
+    }
+
+    .visual-label strong {
+      display: block;
+      font-size: 30px;
+      letter-spacing: -.06em;
+      margin-bottom: 5px;
+    }
+
+    .visual-label small {
+      font-size: 11px;
+      opacity: .8;
+    }
+
+    /* ---------------- TRUST ---------------- */
+
+    .trust {
+      background: var(--black);
+      color: white;
+      border-top: 4px solid var(--red);
+    }
+
+    .trust-inner {
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .trust-item {
+      font-size: 12px;
+      color: #aaa;
+      white-space: nowrap;
+    }
+
+    .trust-item strong {
+      color: white;
+      font-size: 17px;
+      margin-right: 6px;
+    }
+
+    /* ---------------- GENERAL ---------------- */
+
+    section {
+      padding: 140px 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: .55fr 1.45fr;
+      gap: 40px;
+      margin-bottom: 65px;
+    }
+
+    .section-index {
+      color: var(--red);
+    }
+
+    .section-title {
+      font-size: clamp(42px, 5vw, 72px);
+      line-height: .92;
+      letter-spacing: -.065em;
+      font-weight: 600;
+    }
+
+    .section-title span {
+      color: #aaa;
+    }
+
+    /* ---------------- SERVICES ---------------- */
+
+    #hizmetler {
+      background: var(--light);
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 14px;
+    }
+
+    .service {
+      position: relative;
+      overflow: hidden;
+      background: white;
+      border: 1px solid var(--line);
+      transition: .4s;
+    }
+
+    .service:hover {
+      transform: translateY(-6px);
+      border-color: #c9c9c6;
+      box-shadow: 0 20px 50px rgba(0,0,0,.07);
+    }
+
+    .service-big {
+      min-height: 500px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .service-side {
+      display: grid;
+      gap: 14px;
+    }
+
+    .service-small {
+      min-height: 243px;
+      padding: 30px;
+    }
+
+    .service-number {
+      color: #999;
+    }
+
+    .service-icon {
+      width: 55px;
+      height: 55px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      color: var(--red);
+      font-size: 20px;
+      transition: .4s;
+    }
+
+    .service:hover .service-icon {
+      background: var(--red);
+      color: white;
+      border-color: var(--red);
+      transform: rotate(-8deg);
+    }
+
+    .service h3 {
+      font-size: 32px;
+      letter-spacing: -.055em;
+      margin-top: 25px;
+    }
+
+    .service-small h3 {
+      font-size: 24px;
+      margin-top: 35px;
+    }
+
+    .service p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+      max-width: 460px;
+      margin-top: 12px;
+    }
+
+    .service-link {
+      display: inline-flex;
+      gap: 9px;
+      color: var(--red);
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 22px;
+    }
+
+    .service-link span {
+      transition: .25s;
+    }
+
+    .service:hover .service-link span {
+      transform: translateX(6px);
+    }
+
+    /* ---------------- PROCESS ---------------- */
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+    .step {
+      min-height: 260px;
+      padding: 30px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      transition: .3s;
+    }
+
+    .step:hover {
+      background: var(--soft-red);
+    }
+
+    .step-number {
+      color: var(--red);
+    }
+
+    .step h3 {
+      font-size: 22px;
+      letter-spacing: -.04em;
+      margin-top: 75px;
+    }
+
+    .step p {
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 13px;
+      max-width: 230px;
+      margin-top: 10px;
+    }
+
+    .step-dot {
+      position: absolute;
+      right: 28px;
+      top: 30px;
+      width: 7px;
+      height: 7px;
+      background: var(--red);
+      border-radius: 50%;
+    }
+
+    /* ---------------- AREA ---------------- */
+
+    .area {
+      background: var(--black);
+      color: white;
+    }
+
+    .area-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 100px;
+      align-items: center;
+    }
+
+    .area-title {
+      font-size: clamp(55px, 7vw, 95px);
+      line-height: .86;
+      letter-spacing: -.075em;
+    }
+
+    .area-title span {
+      color: var(--red);
+    }
+
+    .area-copy {
+      color: #999;
+      max-width: 470px;
+      line-height: 1.7;
+      margin: 30px 0;
+    }
+
+    .districts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .district {
+      border: 1px solid #333;
+      padding: 9px 13px;
+      color: #bbb;
+      font: 10px "DM Mono";
+    }
+
+    .map {
+      height: 470px;
+      position: relative;
+      border: 1px solid #333;
+      background:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 45px 45px;
+      overflow: hidden;
+    }
+
+    .map-ring {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border: 1px solid rgba(215,25,32,.25);
+      border-radius: 50%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+
+    .map-ring:nth-child(2) {
+      width: 250px;
+      height: 250px;
+    }
+
+    .map-ring:nth-child(3) {
+      width: 100px;
+      height: 100px;
+    }
+
+    .map-pin {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 16px;
+      height: 16px;
+      background: var(--red);
+      border-radius: 50%;
+      transform: translate(-50%,-50%);
+      box-shadow: 0 0 0 10px rgba(215,25,32,.13),
+                  0 0 45px rgba(215,25,32,.5);
+    }
+
+    .map-label {
+      position: absolute;
+      left: calc(50% + 30px);
+      top: calc(50% - 30px);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .map-label small {
+      display: block;
+      color: #777;
+      font: 9px "DM Mono";
+      margin-top: 5px;
+    }
+
+    /* ---------------- CTA ---------------- */
+
+    .cta {
+      padding-bottom: 150px;
+    }
+
+    .cta-box {
+      min-height: 420px;
+      position: relative;
+      overflow: hidden;
+      background: var(--red);
+      color: white;
+      padding: 60px;
+    }
+
+    .cta-box::after {
+      content: "Y";
+      position: absolute;
+      right: -30px;
+      bottom: -130px;
+      font-size: 480px;
+      line-height: 1;
+      font-weight: 700;
+      color: rgba(0,0,0,.08);
+      pointer-events: none;
+    }
+
+    .cta-box h2 {
+      font-size: clamp(50px, 7vw, 90px);
+      line-height: .86;
+      letter-spacing: -.075em;
+      max-width: 800px;
+      margin: 22px 0 35px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-white {
+      background: white;
+      color: var(--red);
+    }
+
+    .cta-white:hover {
+      background: #f2f2f2;
+    }
+
+    /* ---------------- FOOTER ---------------- */
+
+    footer {
+      background: var(--black);
+      color: #777;
+      border-top: 1px solid #292929;
+      padding: 30px 0;
+      font-size: 11px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* ---------------- REVEAL ---------------- */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ---------------- MOBILE ---------------- */
+
+    @media(max-width:850px) {
+
+      .container {
+        width: min(var(--max), calc(100% - 28px));
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 120px;
+      }
+
+      .hero-grid,
+      .services,
+      .area-grid,
+      .section-head {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      h1 {
+        font-size: clamp(55px, 16vw, 90px);
+      }
+
+      .hero-visual {
+        height: 400px;
+      }
+
+      .visual-frame {
+        inset: 20px 0 0 20px;
+      }
+
+      section {
+        padding: 100px 0;
+      }
+
+      .trust-inner {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 20px 0;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .map {
+        height: 340px;
+      }
+
+      .cta-box {
+        padding: 40px 25px;
+      }
+    }
+
+    @media(max-width:520px) {
+
+      .brand-sub {
+        display: none;
+      }
+
+      .nav-cta {
+        padding: 10px 13px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-big {
+        min-height: 420px;
+      }
+
+      .cta-box::after {
+        font-size: 250px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Yavuz Klima ve Beyaz Eşya Servis",
+    "description": "Mersin klima ve beyaz eşya teknik servis hizmetleri.",
+    "areaServed": [
+      "Mersin",
+      "Mezitli",
+      "Yenişehir",
+      "Akdeniz",
+      "Toroslar"
+    ],
+    "serviceType": [
+      "Klima Servisi",
+      "Klima Montajı",
+      "Klima Bakımı",
+      "Klima Onarımı",
+      "Beyaz Eşya Servisi"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+<nav id="nav">
+  <div class="container nav-inner">
+
+    <a href="#" class="brand">
+      <div class="brand-mark"></div>
+      <span>YAVUZ</span>
+      <span class="brand-sub">KLİMA & SERVİS</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#hizmetler">Hizmetler</a>
+      <a href="#surec">Nasıl Çalışır?</a>
+      <a href="#bolge">Hizmet Bölgesi</a>
+    </div>
+
+    <a href="tel:+905000000000" class="nav-cta">
+      Servis Çağır →
+    </a>
+
+  </div>
+</nav>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container hero-grid">
+
+      <div class="reveal">
+
+        <div class="eyebrow mono">
+          <span class="eyebrow-line"></span>
+          MERSİN TEKNİK SERVİS
+        </div>
+
+        <h1>
+          Klima<br>
+          <span>işini</span><br>
+          şansa bırakma.
+        </h1>
+
+        <p class="hero-copy">
+          Klima ve beyaz eşya servisinde hızlı müdahale,
+          titiz işçilik ve güvenilir teknik destek.
+          Mersin genelinde servis hizmeti.
+        </p>
+
+        <div class="hero-actions">
+
+          <a href="tel:+905000000000" class="btn btn-red">
+            Servis Talebi Oluştur ↗
+          </a>
+
+          <a href="#hizmetler" class="btn btn-outline">
+            Hizmetleri İncele
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-visual reveal">
+
+        <div class="visual-frame">
+
+          <div class="ac-unit"></div>
+
+          <div class="air"></div>
+          <div class="air"></div>
+          <div class="air"></div>
+
+        </div>
+
+        <div class="visual-label">
+          <strong>Hızlı.</strong>
+          <small>Doğru teşhis · Temiz işçilik</small>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TRUST -->
+
+  <div class="trust">
+
+    <div class="container trust-inner">
+
+      <div class="trust-item">
+        <strong>01</strong> Klima Servisi
+      </div>
+
+      <div class="trust-item">
+        <strong>02</strong> Montaj & Kurulum
+      </div>
+
+      <div class="trust-item">
+        <strong>03</strong> Klima Bakımı
+      </div>
+
+      <div class="trust-item">
+        <strong>04</strong> Beyaz Eşya Servisi
+      </div>
+
+      <div class="trust-item">
+        <strong>05</strong> Mersin Geneli
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- SERVICES -->
+
+  <section id="hizmetler">
+
+    <div class="container">
+
+      <div class="section-head reveal">
+
+        <div class="section-index mono">
+          01 / HİZMETLER
+        </div>
+
+        <h2 class="section-title">
+          Sorunu bul.<br>
+          <span>Doğru müdahaleyi yap.</span>
+        </h2>
+
+      </div>
+
+
+      <div class="services">
+
+        <article class="service service-big reveal">
+
+          <div>
+            <div class="service-number mono">
+              SERVICE / 01
+            </div>
+
+            <div class="service-icon" style="margin-top:35px;">
+              ❄
+            </div>
+          </div>
+
+          <div>
+
+            <h3>Klima Servisi</h3>
+
+            <p>
+              Klima çalışmıyor, yeterince soğutmuyor veya performansı düştü mü?
+              Arıza tespiti, bakım ve onarım işlemlerini cihazın durumuna göre
+              gerçekleştiriyoruz.
+            </p>
+
+            <a href="tel:+905000000000" class="service-link">
+              Servis talep et
+              <span>→</span>
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <div class="service-side">
+
+          <article class="service service-small reveal">
+
+            <div class="service-number mono">
+              SERVICE / 02
+            </div>
+
+            <div class="service-icon" style="margin-top:25px;">
+              +
+            </div>
+
+            <h3>Montaj & Kurulum</h3>
+
+            <p>
+              Yeni klimanız için doğru konumlandırma ve profesyonel kurulum.
+            </p>
+
+          </article>
+
+
+          <article class="service service-small reveal">
+
+            <div class="service-number mono">
+              SERVICE / 03
+            </div>
+
+            <div class="service-icon" style="margin-top:25px;">
+              ◌
+            </div>
+
+            <h3>Bakım</h3>
+
+            <p>
+              Filtre temizliği, genel kontrol ve performans odaklı klima bakımı.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROCESS -->
+
+  <section id="surec">
+
+    <div class="container">
+
+      <div class="section-head reveal">
+
+        <div class="section-index mono">
+          02 / SÜREÇ
+        </div>
+
+        <h2 class="section-title">
+          Servis süreci<br>
+          <span>gereksiz uzamasın.</span>
+        </h2>
+
+      </div>
+
+
+      <div class="process-grid">
+
+        <div class="step reveal">
+          <span class="step-number mono">01</span>
+          <span class="step-dot"></span>
+
+          <h3>Talep</h3>
+
+          <p>
+            Telefon veya mesaj üzerinden servis ihtiyacınızı iletiyorsunuz.
+          </p>
+        </div>
+
+
+        <div class="step reveal">
+          <span class="step-number mono">02</span>
+          <span class="step-dot"></span>
+
+          <h3>Teşhis</h3>
+
+          <p>
+            Cihaz kontrol edilerek problemin kaynağı belirleniyor.
+          </p>
+        </div>
+
+
+        <div class="step reveal">
+          <span class="step-number mono">03</span>
+          <span class="step-dot"></span>
+
+          <h3>Müdahale</h3>
+
+          <p>
+            Gerekli bakım, onarım veya kurulum işlemi gerçekleştiriliyor.
+          </p>
+        </div>
+
+
+        <div class="step reveal">
+          <span class="step-number mono">04</span>
+          <span class="step-dot"></span>
+
+          <h3>Kontrol</h3>
+
+          <p>
+            İşlem sonrası cihazın çalışması tekrar kontrol ediliyor.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICE AREA -->
+
+  <section id="bolge" class="area">
+
+    <div class="container area-grid">
+
+      <div class="reveal">
+
+        <div class="section-index mono">
+          03 / HİZMET BÖLGESİ
+        </div>
+
+        <h2 class="area-title">
+          Mersin.<br>
+          <span>Bizim saha.</span>
+        </h2>
+
+        <p class="area-copy">
+          Mersin'in farklı bölgelerinde klima ve beyaz eşya servis hizmeti
+          sağlıyoruz. Mezitli, Yenişehir, Akdeniz ve Toroslar başta olmak üzere
+          çevre ilçelere de servis desteği sunuyoruz.
+        </p>
+
+        <div class="districts">
+
+          <span class="district">MEZİTLİ</span>
+          <span class="district">YENİŞEHİR</span>
+          <span class="district">AKDENİZ</span>
+          <span class="district">TOROSLAR</span>
+          <span class="district">MERSİN</span>
+
+        </div>
+
+      </div>
+
+
+      <div class="map reveal">
+
+        <div class="map-ring"></div>
+        <div class="map-ring"></div>
+        <div class="map-ring"></div>
+
+        <div class="map-pin"></div>
+
+        <div class="map-label">
+          MERSİN
+          <small>SERVİS BÖLGESİ</small>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+
+  <section class="cta">
+
+    <div class="container">
+
+      <div class="cta-box reveal">
+
+        <div class="mono">
+          SERVİS GEREKİYORSA
+        </div>
+
+        <h2>
+          Sorunu büyütmeden<br>
+          çözmeye <span>başlayalım.</span>
+        </h2>
+
+        <a href="tel:+905000000000" class="btn cta-white">
+          Yavuz Servis'i Ara ↗
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <span>
+      © 2026 Yavuz Klima ve Beyaz Eşya Servis
+    </span>
+
+    <span>
+      MERSİN · TEKNİK SERVİS
+    </span>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+  /* Navbar */
+
+  const nav = document.getElementById("nav");
+
+  window.addEventListener("scroll", () => {
+    nav.classList.toggle("scrolled", window.scrollY > 30);
+  }, { passive: true });
+
+
+  /* Scroll reveal */
+
+  const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+
+        entry.target.classList.add("visible");
+
+        observer.unobserve(entry.target);
+
+      }
+
+    });
+
+  }, {
+    threshold: .12
+  });
+
+
+  document
+    .querySelectorAll(".reveal")
+    .forEach(el => observer.observe(el));
+
+
+  /* Magnetic buttons */
+
+  document
+    .querySelectorAll(".btn-red, .nav-cta")
+    .forEach(button => {
+
+      button.addEventListener("mousemove", e => {
+
+        if (window.innerWidth < 700) return;
+
+        const rect = button.getBoundingClientRect();
+
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        button.style.transform =
+          `translate(${x * .08}px, ${y * .08}px)`;
+
+      });
+
+      button.addEventListener("mouseleave", () => {
+        button.style.transform = "";
+      });
+
+    });
+
+
+  /* Service hover tilt */
+
+  document
+    .querySelectorAll(".service")
+    .forEach(card => {
+
+      card.addEventListener("mousemove", e => {
+
+        if (window.innerWidth < 700) return;
+
+        const rect = card.getBoundingClientRect();
+
+        const x =
+          (e.clientX - rect.left) / rect.width - .5;
+
+        const y =
+          (e.clientY - rect.top) / rect.height - .5;
+
+        card.style.transform =
+          `perspective(1000px)
+           rotateX(${y * -1.5}deg)
+           rotateY(${x * 1.5}deg)
+           translateY(-6px)`;
+
+      });
+
+      card.addEventListener("mouseleave", () => {
+        card.style.transform = "";
+      });
+
+    });
+
+</script>
+
+</body>
+</html>
