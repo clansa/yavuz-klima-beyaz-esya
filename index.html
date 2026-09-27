@@ -53,6 +53,12 @@
       text-decoration: none;
     }
 
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
     .container {
       width: min(var(--max), calc(100% - 40px));
       margin: auto;
@@ -66,7 +72,6 @@
     }
 
     /* ---------------- NAV ---------------- */
-
     nav {
       position: fixed;
       z-index: 100;
@@ -78,265 +83,55 @@
       border-bottom: 1px solid transparent;
       transition: .3s;
     }
-
-    nav.scrolled {
-      border-color: var(--line);
-    }
-
-    .nav-inner {
-      height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      font-weight: 700;
-      letter-spacing: -.04em;
-    }
-
-    .brand-logo {
-      height: 50px; 
-      width: auto;
-      object-fit: contain;
-    }
-
-    .brand-sub {
-      color: #777;
-      font-family: "DM Mono";
-      font-size: 9px;
-      letter-spacing: .1em;
-      margin-left: 2px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      font-size: 13px;
-    }
-
-    .nav-links a {
-      color: #555;
-      transition: .2s;
-    }
-
-    .nav-links a:hover {
-      color: var(--red);
-    }
-
-    .nav-cta {
-      background: var(--red);
-      color: white;
-      padding: 12px 18px;
-      border-radius: 3px;
-      font-size: 13px;
-      font-weight: 600;
-      transition: .25s;
-    }
-
-    .nav-cta:hover {
-      background: var(--red-dark);
-      transform: translateY(-2px);
-    }
+    nav.scrolled { border-color: var(--line); }
+    .nav-inner { height: 78px; display: flex; align-items: center; justify-content: space-between; }
+    .brand { display: flex; align-items: center; gap: 11px; font-weight: 700; letter-spacing: -.04em; }
+    .brand-logo { height: 50px; width: auto; object-fit: contain; }
+    .nav-links { display: flex; gap: 32px; font-size: 13px; }
+    .nav-links a { color: #555; transition: .2s; }
+    .nav-links a:hover { color: var(--red); }
+    .nav-cta { background: var(--red); color: white; padding: 12px 18px; border-radius: 3px; font-size: 13px; font-weight: 600; transition: .25s; }
+    .nav-cta:hover { background: var(--red-dark); transform: translateY(-2px); }
 
     /* ---------------- HERO ---------------- */
-
     .hero {
       min-height: 100vh;
       padding-top: 140px;
       padding-bottom: 80px;
       display: flex;
       align-items: center;
-      background:
-        linear-gradient(90deg, rgba(0,0,0,.025) 1px, transparent 1px),
-        linear-gradient(rgba(0,0,0,.025) 1px, transparent 1px);
+      background: linear-gradient(90deg, rgba(0,0,0,.025) 1px, transparent 1px), linear-gradient(rgba(0,0,0,.025) 1px, transparent 1px);
       background-size: 80px 80px;
     }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 70px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      color: var(--red);
-      margin-bottom: 25px;
-    }
-
-    .eyebrow-line {
-      width: 32px;
-      height: 2px;
-      background: var(--red);
-    }
-
-    h1 {
-      font-size: clamp(60px, 8vw, 110px);
-      line-height: .84;
-      letter-spacing: -.08em;
-      font-weight: 600;
-      max-width: 850px;
-    }
-
-    h1 span {
-      color: var(--red);
-    }
-
-    .hero-copy {
-      max-width: 530px;
-      margin-top: 34px;
-      color: var(--muted);
-      font-size: 16px;
-      line-height: 1.75;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 10px;
-      margin-top: 30px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      min-height: 52px;
-      padding: 0 22px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      font-size: 13px;
-      font-weight: 600;
-      border-radius: 3px;
-      transition: .3s;
-    }
-
-    .btn-red {
-      background: var(--red);
-      color: white;
-    }
-
-    .btn-red:hover {
-      background: var(--red-dark);
-      transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(215,25,32,.18);
-    }
-
-    .btn-outline {
-      border: 1px solid var(--line);
-      background: white;
-    }
-
-    .btn-outline:hover {
-      border-color: var(--red);
-      color: var(--red);
-      transform: translateY(-3px);
-    }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 70px; align-items: center; }
+    .eyebrow { display: flex; align-items: center; gap: 9px; color: var(--red); margin-bottom: 25px; }
+    .eyebrow-line { width: 32px; height: 2px; background: var(--red); }
+    h1 { font-size: clamp(60px, 8vw, 110px); line-height: .84; letter-spacing: -.08em; font-weight: 600; max-width: 850px; }
+    h1 span { color: var(--red); }
+    .hero-copy { max-width: 530px; margin-top: 34px; color: var(--muted); font-size: 16px; line-height: 1.75; }
+    .hero-actions { display: flex; gap: 10px; margin-top: 30px; flex-wrap: wrap; }
+    .btn { min-height: 52px; padding: 0 22px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; font-size: 13px; font-weight: 600; border-radius: 3px; transition: .3s; }
+    .btn-red { background: var(--red); color: white; }
+    .btn-red:hover { background: var(--red-dark); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(215,25,32,.18); }
+    .btn-outline { border: 1px solid var(--line); background: white; }
+    .btn-outline:hover { border-color: var(--red); color: var(--red); transform: translateY(-3px); }
 
     /* ---------------- HERO VISUAL ---------------- */
-
-    .hero-visual {
-      height: 520px;
-      position: relative;
-    }
-
+    .hero-visual { height: 520px; position: relative; }
     .visual-frame {
       position: absolute;
       inset: 35px 0 0 35px;
       border: 1px solid var(--line);
       background: #eeeeeb;
       overflow: hidden;
+      border-radius: 4px;
     }
-
-    .visual-frame::before {
-      content: "KLİMA / 01";
-      position: absolute;
-      top: 18px;
-      left: 18px;
-      font: 10px "DM Mono";
-      color: #777;
-      letter-spacing: .1em;
-      z-index: 2;
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.9;
     }
-
-    .visual-frame::after {
-      content: "";
-      position: absolute;
-      width: 260px;
-      height: 260px;
-      right: -100px;
-      bottom: -100px;
-      border: 1px solid rgba(215,25,32,.2);
-      border-radius: 50%;
-    }
-
-    .ac-unit {
-      position: absolute;
-      width: 78%;
-      height: 170px;
-      top: 125px;
-      left: 11%;
-      background: linear-gradient(145deg,#fff,#d8d8d5);
-      border: 1px solid #c9c9c5;
-      border-radius: 18px 18px 8px 8px;
-      box-shadow: 0 30px 50px rgba(0,0,0,.12);
-      transform: rotate(-4deg);
-      animation: floating 5s ease-in-out infinite;
-    }
-
-    .ac-unit::before {
-      content: "YAVUZ";
-      position: absolute;
-      right: 30px;
-      top: 25px;
-      font: 10px "DM Mono";
-      letter-spacing: .14em;
-      color: #777;
-    }
-
-    .ac-unit::after {
-      content: "";
-      position: absolute;
-      left: 35px;
-      right: 35px;
-      bottom: 30px;
-      height: 4px;
-      background: #c8c8c5;
-      box-shadow:
-        0 9px 0 #d2d2cf,
-        0 18px 0 #d9d9d6;
-    }
-
-    .air {
-      position: absolute;
-      width: 4px;
-      height: 80px;
-      background: linear-gradient(to bottom, rgba(215,25,32,.4), transparent);
-      bottom: 35px;
-      border-radius: 5px;
-      animation: air 2.5s infinite ease-in-out;
-    }
-
-    .air:nth-child(1) { left: 35%; animation-delay: .2s; }
-    .air:nth-child(2) { left: 48%; animation-delay: .5s; }
-    .air:nth-child(3) { left: 61%; animation-delay: .8s; }
-
-    @keyframes floating {
-      0%,100% { transform: rotate(-4deg) translateY(0); }
-      50% { transform: rotate(-2deg) translateY(-12px); }
-    }
-
-    @keyframes air {
-      0%,100% { opacity: .2; transform: translateY(0); }
-      50% { opacity: .7; transform: translateY(15px); }
-    }
-
     .visual-label {
       position: absolute;
       bottom: 30px;
@@ -347,790 +142,212 @@
       width: 230px;
       z-index: 3;
     }
-
-    .visual-label strong {
-      display: block;
-      font-size: 30px;
-      letter-spacing: -.06em;
-      margin-bottom: 5px;
-    }
-
-    .visual-label small {
-      font-size: 11px;
-      opacity: .8;
-    }
+    .visual-label strong { display: block; font-size: 30px; letter-spacing: -.06em; margin-bottom: 5px; }
+    .visual-label small { font-size: 11px; opacity: .8; }
 
     /* ---------------- TRUST ---------------- */
-
-    .trust {
-      background: var(--black);
-      color: white;
-      border-top: 4px solid var(--red);
-    }
-
-    .trust-inner {
-      min-height: 90px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 25px;
-    }
-
-    .trust-item {
-      font-size: 12px;
-      color: #aaa;
-      white-space: nowrap;
-    }
-
-    .trust-item strong {
-      color: white;
-      font-size: 17px;
-      margin-right: 6px;
-    }
+    .trust { background: var(--black); color: white; border-top: 4px solid var(--red); }
+    .trust-inner { min-height: 90px; display: flex; align-items: center; justify-content: space-between; gap: 25px; }
+    .trust-item { font-size: 12px; color: #aaa; white-space: nowrap; }
+    .trust-item strong { color: white; font-size: 17px; margin-right: 6px; }
 
     /* ---------------- GENERAL ---------------- */
-
-    section {
-      padding: 140px 0;
-    }
-
-    .section-head {
-      display: grid;
-      grid-template-columns: .55fr 1.45fr;
-      gap: 40px;
-      margin-bottom: 65px;
-    }
-
-    .section-index {
-      color: var(--red);
-    }
-
-    .section-title {
-      font-size: clamp(42px, 5vw, 72px);
-      line-height: .92;
-      letter-spacing: -.065em;
-      font-weight: 600;
-    }
-
-    .section-title span {
-      color: #aaa;
-    }
+    section { padding: 140px 0; }
+    .section-head { display: grid; grid-template-columns: .55fr 1.45fr; gap: 40px; margin-bottom: 65px; }
+    .section-index { color: var(--red); }
+    .section-title { font-size: clamp(42px, 5vw, 72px); line-height: .92; letter-spacing: -.065em; font-weight: 600; }
+    .section-title span { color: #aaa; }
 
     /* ---------------- SERVICES ---------------- */
-
-    #hizmetler {
-      background: var(--light);
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 14px;
-    }
-
-    .service {
-      position: relative;
-      overflow: hidden;
-      background: white;
-      border: 1px solid var(--line);
-      transition: .4s;
-    }
-
-    .service:hover {
-      transform: translateY(-6px);
-      border-color: #c9c9c6;
-      box-shadow: 0 20px 50px rgba(0,0,0,.07);
-    }
-
+    #hizmetler { background: var(--light); }
+    .services { display: grid; grid-template-columns: 1.15fr .85fr; gap: 14px; }
+    .service { position: relative; overflow: hidden; background: white; border: 1px solid var(--line); transition: .4s; }
+    .service:hover { transform: translateY(-6px); border-color: #c9c9c6; box-shadow: 0 20px 50px rgba(0,0,0,.07); }
+    
     .service-big {
       min-height: 500px;
       padding: 40px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      background-image: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.95) 100%), url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=2069&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
     }
-
-    .service-side {
-      display: grid;
-      gap: 14px;
-    }
-
+    
+    .service-side { display: grid; gap: 14px; }
     .service-small {
       min-height: 243px;
       padding: 30px;
+      background-image: linear-gradient(to right, rgba(255,255,255,0.95) 40%, rgba(255,255,255,0.85) 100%), url('https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=2070&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center right;
     }
 
-    .service-number {
-      color: #999;
-    }
+    .service-number { color: #999; }
+    .service-icon { width: 55px; height: 55px; display: grid; place-items: center; border: 1px solid var(--line); color: var(--red); font-size: 20px; transition: .4s; background: white; }
+    .service:hover .service-icon { background: var(--red); color: white; border-color: var(--red); transform: rotate(-8deg); }
+    .service h3 { font-size: 32px; letter-spacing: -.055em; margin-top: 25px; }
+    .service-small h3 { font-size: 24px; margin-top: 35px; }
+    .service p { color: var(--text); font-size: 14px; line-height: 1.65; max-width: 460px; margin-top: 12px; font-weight: 500;}
+    .service-link { display: inline-flex; gap: 9px; color: var(--red); font-size: 13px; font-weight: 600; margin-top: 22px; }
+    .service-link span { transition: .25s; }
+    .service:hover .service-link span { transform: translateX(6px); }
 
-    .service-icon {
-      width: 55px;
-      height: 55px;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--line);
-      color: var(--red);
-      font-size: 20px;
-      transition: .4s;
-    }
-
-    .service:hover .service-icon {
-      background: var(--red);
-      color: white;
-      border-color: var(--red);
-      transform: rotate(-8deg);
-    }
-
-    .service h3 {
-      font-size: 32px;
-      letter-spacing: -.055em;
-      margin-top: 25px;
-    }
-
-    .service-small h3 {
-      font-size: 24px;
-      margin-top: 35px;
-    }
-
-    .service p {
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.65;
-      max-width: 460px;
-      margin-top: 12px;
-    }
-
-    .service-link {
-      display: inline-flex;
-      gap: 9px;
-      color: var(--red);
-      font-size: 13px;
-      font-weight: 600;
-      margin-top: 22px;
-    }
-
-    .service-link span {
-      transition: .25s;
-    }
-
-    .service:hover .service-link span {
-      transform: translateX(6px);
-    }
-
-    /* ---------------- SEMANTIC SEO SERVICES (Doğal İçerik) ---------------- */
-    
-    .detailed-services {
-      margin-top: 100px;
-    }
-    
-    .detailed-head {
-      margin-bottom: 40px;
-    }
-
-    .detailed-head h3 {
-      font-size: 32px;
-      font-weight: 600;
-      letter-spacing: -.04em;
-      margin-bottom: 15px;
-    }
-
-    .detailed-head p {
-      color: var(--muted);
-      font-size: 15px;
-      max-width: 650px;
-      line-height: 1.6;
-    }
-
-    .detailed-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 20px;
-    }
-
-    .detailed-card {
-      background: white;
-      padding: 35px;
-      border: 1px solid var(--line);
-      border-radius: 4px;
-      transition: .3s;
-    }
-
-    .detailed-card:hover {
-      border-color: #c9c9c6;
-      box-shadow: 0 15px 40px rgba(0,0,0,.04);
-      transform: translateY(-4px);
-    }
-
-    .detailed-card h4 {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 15px;
-      color: var(--black);
-    }
-
-    .detailed-card p {
-      font-size: 14px;
-      color: var(--muted);
-      line-height: 1.6;
-      margin-bottom: 20px;
-      min-height: 65px;
-    }
-
-    .detailed-card ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .detailed-card li {
-      font-size: 13px;
-      color: #444;
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      line-height: 1.4;
-    }
-
-    .detailed-card li::before {
-      content: "→";
-      color: var(--red);
-      font-weight: bold;
-    }
-
-    /* Markalar Alanı */
-    .brands-section {
-      margin-top: 60px;
-      padding: 30px;
-      background: white;
-      border: 1px solid var(--line);
-      border-radius: 4px;
-    }
-
-    .brands-section h5 {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-      color: #999;
-      margin-bottom: 20px;
-    }
-
-    .brands-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .brands-tags span {
-      background: var(--light);
-      padding: 8px 14px;
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--black);
-      border-radius: 30px;
-      border: 1px solid var(--line);
-    }
+    /* ---------------- SEMANTIC SEO SERVICES ---------------- */
+    .detailed-services { margin-top: 100px; }
+    .detailed-head { margin-bottom: 40px; }
+    .detailed-head h3 { font-size: 32px; font-weight: 600; letter-spacing: -.04em; margin-bottom: 15px; }
+    .detailed-head p { color: var(--muted); font-size: 15px; max-width: 650px; line-height: 1.6; }
+    .detailed-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+    .detailed-card { background: white; padding: 35px; border: 1px solid var(--line); border-radius: 4px; transition: .3s; }
+    .detailed-card:hover { border-color: #c9c9c6; box-shadow: 0 15px 40px rgba(0,0,0,.04); transform: translateY(-4px); }
+    .detailed-card h4 { font-size: 20px; font-weight: 600; margin-bottom: 15px; color: var(--black); }
+    .detailed-card p { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 20px; min-height: 65px; }
+    .detailed-card ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .detailed-card li { font-size: 13px; color: #444; display: flex; align-items: flex-start; gap: 10px; line-height: 1.4; }
+    .detailed-card li::before { content: "→"; color: var(--red); font-weight: bold; }
+    .brands-section { margin-top: 60px; padding: 30px; background: white; border: 1px solid var(--line); border-radius: 4px; }
+    .brands-section h5 { font-size: 12px; text-transform: uppercase; letter-spacing: .1em; color: #999; margin-bottom: 20px; }
+    .brands-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .brands-tags span { background: var(--light); padding: 8px 14px; font-size: 12px; font-weight: 500; color: var(--black); border-radius: 30px; border: 1px solid var(--line); }
 
     /* ---------------- PROCESS ---------------- */
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      border-top: 1px solid var(--line);
-      border-left: 1px solid var(--line);
-    }
-
-    .step {
-      min-height: 260px;
-      padding: 30px;
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      position: relative;
-      transition: .3s;
-    }
-
-    .step:hover {
-      background: var(--soft-red);
-    }
-
-    .step-number {
-      color: var(--red);
-    }
-
-    .step h3 {
-      font-size: 22px;
-      letter-spacing: -.04em;
-      margin-top: 75px;
-    }
-
-    .step p {
-      color: var(--muted);
-      line-height: 1.6;
-      font-size: 13px;
-      max-width: 230px;
-      margin-top: 10px;
-    }
-
-    .step-dot {
-      position: absolute;
-      right: 28px;
-      top: 30px;
-      width: 7px;
-      height: 7px;
-      background: var(--red);
-      border-radius: 50%;
-    }
+    .process-grid { display: grid; grid-template-columns: repeat(4,1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .step { min-height: 260px; padding: 30px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); position: relative; transition: .3s; }
+    .step:hover { background: var(--soft-red); }
+    .step-number { color: var(--red); }
+    .step h3 { font-size: 22px; letter-spacing: -.04em; margin-top: 75px; }
+    .step p { color: var(--muted); line-height: 1.6; font-size: 13px; max-width: 230px; margin-top: 10px; }
+    .step-dot { position: absolute; right: 28px; top: 30px; width: 7px; height: 7px; background: var(--red); border-radius: 50%; }
 
     /* ---------------- AREA ---------------- */
-
-    .area {
-      background: var(--black);
-      color: white;
-    }
-
-    .area-grid {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 100px;
-      align-items: center;
-    }
-
-    .area-title {
-      font-size: clamp(55px, 7vw, 95px);
-      line-height: .86;
-      letter-spacing: -.075em;
-    }
-
-    .area-title span {
-      color: var(--red);
-    }
-
-    .area-copy {
-      color: #999;
-      max-width: 470px;
-      line-height: 1.7;
-      margin: 30px 0;
-    }
-
-    .districts {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-bottom: 35px;
-    }
-
-    .district {
-      border: 1px solid #333;
-      padding: 9px 13px;
-      color: #bbb;
-      font: 10px "DM Mono";
-    }
-
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      color: #bbb;
-      font-size: 15px;
-      line-height: 1.5;
-    }
-
-    .contact-info strong {
-      color: white;
-      font-weight: 500;
-    }
-
-    .map {
-      height: 470px;
-      position: relative;
-      border: 1px solid #333;
-      overflow: hidden;
-      background: #111;
-    }
-    
-    .map iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
-    }
+    .area { background: var(--black); color: white; }
+    .area-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 100px; align-items: center; }
+    .area-title { font-size: clamp(55px, 7vw, 95px); line-height: .86; letter-spacing: -.075em; }
+    .area-title span { color: var(--red); }
+    .area-copy { color: #999; max-width: 470px; line-height: 1.7; margin: 30px 0; }
+    .districts { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 35px; }
+    .district { border: 1px solid #333; padding: 9px 13px; color: #bbb; font: 10px "DM Mono"; }
+    .contact-info { display: flex; flex-direction: column; gap: 12px; color: #bbb; font-size: 15px; line-height: 1.5; }
+    .contact-info strong { color: white; font-weight: 500; }
+    .map { height: 470px; position: relative; border: 1px solid #333; overflow: hidden; background: #111; }
+    .map iframe { width: 100%; height: 100%; border: none; display: block; }
 
     /* ---------------- CTA ---------------- */
-
-    .cta {
-      padding-bottom: 150px;
-    }
-
-    .cta-box {
-      min-height: 420px;
-      position: relative;
-      overflow: hidden;
-      background: var(--red);
-      color: white;
-      padding: 60px;
-    }
-
-    .cta-box::after {
-      content: "Y";
-      position: absolute;
-      right: -30px;
-      bottom: -130px;
-      font-size: 480px;
-      line-height: 1;
-      font-weight: 700;
-      color: rgba(0,0,0,.08);
-      pointer-events: none;
-    }
-
-    .cta-box h2 {
-      font-size: clamp(50px, 7vw, 90px);
-      line-height: .86;
-      letter-spacing: -.075em;
-      max-width: 800px;
-      margin: 22px 0 35px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .cta-white {
-      background: white;
-      color: var(--red);
-    }
-
-    .cta-white:hover {
-      background: #f2f2f2;
-    }
+    .cta { padding-bottom: 150px; }
+    .cta-box { min-height: 420px; position: relative; overflow: hidden; background: var(--red); color: white; padding: 60px; }
+    .cta-box::after { content: "Y"; position: absolute; right: -30px; bottom: -130px; font-size: 480px; line-height: 1; font-weight: 700; color: rgba(0,0,0,.08); pointer-events: none; }
+    .cta-box h2 { font-size: clamp(50px, 7vw, 90px); line-height: .86; letter-spacing: -.075em; max-width: 800px; margin: 22px 0 35px; position: relative; z-index: 2; }
+    .cta-white { background: white; color: var(--red); }
+    .cta-white:hover { background: #f2f2f2; }
 
     /* ---------------- FOOTER ---------------- */
-
-    footer {
-      background: var(--black);
-      color: #777;
-      padding: 80px 0 30px;
-      font-size: 14px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1.5fr;
-      gap: 50px;
-      padding-bottom: 50px;
-      border-bottom: 1px solid #292929;
-      margin-bottom: 30px;
-    }
-
-    .footer-brand .brand-logo {
-      height: 40px;
-      margin-bottom: 20px;
-    }
-
-    .footer-brand p {
-      line-height: 1.6;
-      max-width: 320px;
-    }
-
-    .footer-col h4 {
-      color: white;
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .footer-links a {
-      transition: .2s;
-      width: fit-content;
-    }
-
-    .footer-links a:hover {
-      color: var(--red);
-      transform: translateX(4px);
-    }
-
-    .footer-contact {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      line-height: 1.5;
-    }
-
-    .footer-contact a {
-      color: white;
-      transition: .2s;
-    }
-
-    .footer-contact a:hover {
-      color: var(--red);
-    }
-
-    .footer-bottom {
-      display: flex;
-      justify-content: space-between;
-      font-size: 11px;
-      color: #666;
-    }
+    footer { background: var(--black); color: #777; padding: 80px 0 30px; font-size: 14px; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1.5fr; gap: 50px; padding-bottom: 50px; border-bottom: 1px solid #292929; margin-bottom: 30px; }
+    .footer-brand .brand-logo { height: 40px; margin-bottom: 20px; }
+    .footer-brand p { line-height: 1.6; max-width: 320px; }
+    .footer-col h4 { color: white; font-size: 16px; font-weight: 600; margin-bottom: 20px; }
+    .footer-links { display: flex; flex-direction: column; gap: 12px; }
+    .footer-links a { transition: .2s; width: fit-content; }
+    .footer-links a:hover { color: var(--red); transform: translateX(4px); }
+    .footer-contact { display: flex; flex-direction: column; gap: 12px; line-height: 1.5; }
+    .footer-contact a { color: white; transition: .2s; }
+    .footer-contact a:hover { color: var(--red); }
+    .footer-bottom { display: flex; justify-content: space-between; font-size: 11px; color: #666; }
 
     /* ---------------- MOBILE ---------------- */
-
     @media(max-width:850px) {
-
-      .container {
-        width: min(var(--max), calc(100% - 28px));
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .hero {
-        padding-top: 120px;
-      }
-
-      .hero-grid,
-      .services,
-      .area-grid,
-      .section-head,
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
-
-      h1 {
-        font-size: clamp(55px, 16vw, 90px);
-      }
-
-      .hero-visual {
-        height: 400px;
-      }
-
-      .visual-frame {
-        inset: 20px 0 0 20px;
-      }
-
-      section {
-        padding: 100px 0;
-      }
-
-      .trust-inner {
-        overflow-x: auto;
-        justify-content: flex-start;
-        padding: 20px 0;
-      }
-
-      .process-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .map {
-        height: 340px;
-      }
-
-      .cta-box {
-        padding: 40px 25px;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-        text-align: center;
-      }
+      .container { width: min(var(--max), calc(100% - 28px)); }
+      .nav-links { display: none; }
+      .hero { padding-top: 120px; }
+      .hero-grid, .services, .area-grid, .section-head, .footer-grid { grid-template-columns: 1fr; gap: 45px; }
+      h1 { font-size: clamp(55px, 16vw, 90px); }
+      .hero-visual { height: 400px; }
+      .visual-frame { inset: 20px 0 0 20px; }
+      section { padding: 100px 0; }
+      .trust-inner { overflow-x: auto; justify-content: flex-start; padding: 20px 0; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .map { height: 340px; }
+      .cta-box { padding: 40px 25px; }
+      .footer-bottom { flex-direction: column; gap: 15px; align-items: center; text-align: center; }
     }
-
     @media(max-width:520px) {
-
-      .brand-sub {
-        display: none;
-      }
-
-      .nav-cta {
-        padding: 10px 13px;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .process-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .service-big {
-        min-height: 420px;
-      }
-
-      .cta-box::after {
-        font-size: 250px;
-      }
+      .brand-sub { display: none; }
+      .nav-cta { padding: 10px 13px; }
+      .hero-actions { flex-direction: column; }
+      .btn { width: 100%; }
+      .process-grid { grid-template-columns: 1fr; }
+      .service-big { min-height: 420px; }
+      .cta-box::after { font-size: 250px; }
     }
   </style>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Yavuz Klima ve Beyaz Eşya Servis",
-    "description": "Mersin klima ve beyaz eşya teknik servis hizmetleri.",
-    "telephone": "+905432029919",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Merkez mahallesi, Fındıkpınarı caddesi, 52067. Sk. No:18",
-      "addressLocality": "Mezitli",
-      "addressRegion": "Mersin",
-      "postalCode": "33330",
-      "addressCountry": "TR"
-    },
-    "openingHours": "Mo-Su 00:00-23:59",
-    "areaServed": [
-      "Mersin",
-      "Mezitli",
-      "Yenişehir",
-      "Akdeniz",
-      "Toroslar"
-    ],
-    "serviceType": [
-      "Klima Servisi",
-      "Klima Montajı",
-      "Klima Bakımı",
-      "Beyaz Eşya Arıza Tespiti ve Onarımı",
-      "İkinci El Eşya Alım Satım"
-    ]
-  }
-  </script>
 </head>
-
 <body>
 
 <nav id="nav">
   <div class="container nav-inner">
-
-    <a href="#" class="brand">
+    <a href="index.html" class="brand">
         <img src="logo.png" alt="Yavuz Klima Logo" class="brand-logo">
     </a>
-
     <div class="nav-links">
-      <a href="#hizmetler">Hizmetler</a>
-      <a href="#surec">Nasıl Çalışır?</a>
-      <a href="#bolge">İletişim & Bölge</a>
+      <a href="index.html#hizmetler">Hizmetler</a>
+      <a href="index.html#surec">Nasıl Çalışır?</a>
+      <!-- Yeni Galeri Linki -->
+      <a href="galeri.html">Galeri</a>
+      <a href="index.html#bolge">İletişim & Bölge</a>
     </div>
-
-    <a href="tel:+905432029919" class="nav-cta">
-      Servis Çağır →
-    </a>
-
+    <a href="tel:+905432029919" class="nav-cta">Servis Çağır →</a>
   </div>
 </nav>
 
-
 <main>
-
   <!-- HERO -->
-
   <section class="hero">
-
     <div class="container hero-grid">
-
       <div class="reveal">
-
-        <div class="eyebrow mono">
-          <span class="eyebrow-line"></span>
-          MERSİN TEKNİK SERVİS
-        </div>
-
-        <h1>
-          Klima<br>
-          <span>işini</span><br>
-          şansa bırakma.
-        </h1>
-
-        <p class="hero-copy">
-          Klima ve beyaz eşya servisinde hızlı müdahale,
-          titiz işçilik ve güvenilir teknik destek.
-          Tüm Mersin'de garantili çözüm merkezi.
-        </p>
-
+        <div class="eyebrow mono"><span class="eyebrow-line"></span>MERSİN TEKNİK SERVİS</div>
+        <h1>Klima<br><span>işini</span><br>şansa bırakma.</h1>
+        <p class="hero-copy">Klima ve beyaz eşya servisinde hızlı müdahale, titiz işçilik ve güvenilir teknik destek. Tüm Mersin'de garantili çözüm merkezi.</p>
         <div class="hero-actions">
-          
-          <a href="tel:+905432029919" class="btn btn-red">
-            Servis Talebi Oluştur ↗
-          </a>
-
-          <a href="#hizmetler" class="btn btn-outline">
-            Hizmetleri İncele
-          </a>
-
+          <a href="tel:+905432029919" class="btn btn-red">Servis Talebi Oluştur ↗</a>
+          <a href="galeri.html" class="btn btn-outline">Çalışmalarımızı Gör</a>
         </div>
-
       </div>
-
       <div class="hero-visual reveal">
         <div class="visual-frame">
-          <div class="ac-unit"></div>
-          <div class="air"></div>
-          <div class="air"></div>
-          <div class="air"></div>
+          <!-- Soyut çizim yerine gerçek fotoğraf -->
+          <img class="hero-image" src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069&auto=format&fit=crop" alt="Mersin Klima Teknik Servisi">
         </div>
         <div class="visual-label">
           <strong>Hızlı.</strong>
           <small>Doğru teşhis · Temiz işçilik</small>
         </div>
       </div>
-
     </div>
-
   </section>
 
-
   <!-- TRUST -->
-
   <div class="trust">
     <div class="container trust-inner">
-      <div class="trust-item">
-        <strong>01</strong> Klima Servisi
-      </div>
-      <div class="trust-item">
-        <strong>02</strong> Montaj & Kurulum
-      </div>
-      <div class="trust-item">
-        <strong>03</strong> Beyaz Eşya Onarımı
-      </div>
-      <div class="trust-item">
-        <strong>04</strong> 2. El / Spot Alım-Satım
-      </div>
-      <div class="trust-item">
-        <strong>05</strong> Mersin Geneli
-      </div>
+      <div class="trust-item"><strong>01</strong> Klima Servisi</div>
+      <div class="trust-item"><strong>02</strong> Montaj & Kurulum</div>
+      <div class="trust-item"><strong>03</strong> Beyaz Eşya Onarımı</div>
+      <div class="trust-item"><strong>04</strong> 2. El / Spot Alım-Satım</div>
+      <div class="trust-item"><strong>05</strong> Mersin Geneli</div>
     </div>
   </div>
 
-
   <!-- SERVICES -->
-
   <section id="hizmetler">
-
     <div class="container">
-
       <div class="section-head reveal">
         <div class="section-index mono">01 / HİZMETLER</div>
-        <h2 class="section-title">
-          Sorunu bul.<br>
-          <span>Doğru müdahaleyi yap.</span>
-        </h2>
+        <h2 class="section-title">Sorunu bul.<br><span>Doğru müdahaleyi yap.</span></h2>
       </div>
 
-      <!-- MAIN SERVICES HERO CARDS -->
       <div class="services">
-
         <article class="service service-big reveal">
           <div>
             <div class="service-number mono">SERVICE / 01</div>
@@ -1138,13 +355,8 @@
           </div>
           <div>
             <h3>Klima Servisi</h3>
-            <p>
-              Klimanız soğutmuyor, su akıtıyor veya performansı mı düştü? 
-              Arıza tespiti, periyodik temizlik ve onarım işlemlerini cihazın durumuna göre profesyonelce çözüyoruz.
-            </p>
-            <a href="tel:+905432029919" class="service-link">
-              Servis talep et <span>→</span>
-            </a>
+            <p>Klimanız soğutmuyor, su akıtıyor veya performansı mı düştü? Arıza tespiti, periyodik temizlik ve onarım işlemlerini cihazın durumuna göre profesyonelce çözüyoruz.</p>
+            <a href="tel:+905432029919" class="service-link">Servis talep et <span>→</span></a>
           </div>
         </article>
 
@@ -1155,7 +367,6 @@
             <h3>Montaj & Kurulum</h3>
             <p>Taşınma veya yer değişikliği sonrası yeni klimanız ya da beyaz eşyanız için profesyonel kurulum ve demontaj sağlıyoruz.</p>
           </article>
-
           <article class="service service-small reveal">
             <div class="service-number mono">SERVICE / 03</div>
             <div class="service-icon" style="margin-top:25px;">◌</div>
@@ -1163,21 +374,15 @@
             <p>Buzdolabı, çamaşır ve bulaşık makinelerinizdeki mekanik ve elektronik arızaları garantili yedek parçalarla gideriyoruz.</p>
           </article>
         </div>
-
       </div>
 
-
-      <!-- SEMANTIC SEO: DOĞAL VE KULLANICI ODAKLI HİZMET DETAYLARI -->
+      <!-- SEMANTIC SEO -->
       <div class="detailed-services reveal">
-
         <div class="detailed-head">
           <h3>Hangi Sorunları Çözüyoruz?</h3>
           <p>Sadece cihazınızı tamir etmekle kalmıyor, sorunun kaynağını bularak kalıcı çözümler üretiyoruz. Karşılaştığınız problemlere göre sunduğumuz profesyonel müdahaleler:</p>
         </div>
-
         <div class="detailed-grid">
-          
-          <!-- Klima Arızaları -->
           <div class="detailed-card">
             <h4>Klima Arızaları</h4>
             <p>Klimanız yeterince soğutmuyor, iç üniteden su damlatıyor veya olağandışı sesler mi çıkarıyor?</p>
@@ -1188,8 +393,6 @@
               <li>Drenaj tıkanıklığı ve su sızdırma onarımı</li>
             </ul>
           </div>
-
-          <!-- Buzdolabı Arızaları -->
           <div class="detailed-card">
             <h4>Buzdolabı & Derin Dondurucu</h4>
             <p>Yiyecekleriniz bozulmaya mı başladı? Cihazınız altından su akıtıyor veya hiç durmadan çalışıyorsa müdahale şarttır.</p>
@@ -1200,8 +403,6 @@
               <li>Sistemdeki delik onarımı ve gaz basımı</li>
             </ul>
           </div>
-
-          <!-- Çamaşır ve Kurutma -->
           <div class="detailed-card">
             <h4>Çamaşır Makinesi Çözümleri</h4>
             <p>Makineniz sıkma yaparken sarsıntı yapıyor, su boşaltmıyor veya kurutma işlemi tamburda takılı mı kalıyor?</p>
@@ -1212,8 +413,6 @@
               <li>Kurutma makinesi yıllık tambur bakımı</li>
             </ul>
           </div>
-
-          <!-- Bulaşık Makinesi -->
           <div class="detailed-card">
             <h4>Bulaşık Makinesi Çözümleri</h4>
             <p>Bulaşıklarınız yıkama sonrası soğuk, kirli mi çıkıyor veya cihazınızın alt tabanında su mu birikiyor?</p>
@@ -1224,8 +423,6 @@
               <li>Hortum ve filtre temizliği</li>
             </ul>
           </div>
-
-          <!-- Genel ve 2. El -->
           <div class="detailed-card">
             <h4>Kurulum & 2. El Eşya</h4>
             <p>Yeni aldığınız ürünlerin kurulumu ya da elinizden çıkarmak istediğiniz kullanılmış beyaz eşyalarınız için güvenilir adres.</p>
@@ -1236,72 +433,46 @@
               <li>Arıza tespiti ve hasarlı elektronik kart tamiri</li>
             </ul>
           </div>
-
         </div>
 
-        <!-- DOĞAL MARKALAR BÖLÜMÜ -->
         <div class="brands-section">
           <h5>Garantili Parça ve Uzman İşçilikle Hizmet Verdiğimiz Markalar</h5>
           <div class="brands-tags">
-            <span>Bosch</span>
-            <span>Siemens</span>
-            <span>Arçelik</span>
-            <span>Beko</span>
-            <span>Samsung</span>
-            <span>LG</span>
-            <span>Vestel</span>
-            <span>Profilo</span>
-            <span>Altus</span>
-            <span>Regal</span>
-            <span>Hoover</span>
-            <span>Electrolux</span>
-            <span>Baymak</span>
-            <span>Airfel</span>
-            <span>Toshiba</span>
-            <span>Uğur Soğutma</span>
+            <span>Bosch</span><span>Siemens</span><span>Arçelik</span><span>Beko</span>
+            <span>Samsung</span><span>LG</span><span>Vestel</span><span>Profilo</span>
+            <span>Altus</span><span>Regal</span><span>Hoover</span><span>Electrolux</span>
+            <span>Baymak</span><span>Airfel</span><span>Toshiba</span><span>Uğur Soğutma</span>
           </div>
         </div>
-
       </div>
-
     </div>
-
   </section>
 
-
   <!-- PROCESS -->
-
   <section id="surec">
     <div class="container">
       <div class="section-head reveal">
         <div class="section-index mono">02 / SÜREÇ</div>
-        <h2 class="section-title">
-          Servis süreci<br>
-          <span>gereksiz uzamasın.</span>
-        </h2>
+        <h2 class="section-title">Servis süreci<br><span>gereksiz uzamasın.</span></h2>
       </div>
       <div class="process-grid">
         <div class="step reveal">
-          <span class="step-number mono">01</span>
-          <span class="step-dot"></span>
+          <span class="step-number mono">01</span><span class="step-dot"></span>
           <h3>Talep</h3>
           <p>Telefon veya mesaj üzerinden servis ihtiyacınızı iletiyorsunuz.</p>
         </div>
         <div class="step reveal">
-          <span class="step-number mono">02</span>
-          <span class="step-dot"></span>
+          <span class="step-number mono">02</span><span class="step-dot"></span>
           <h3>Teşhis</h3>
           <p>Cihaz kontrol edilerek problemin kaynağı belirleniyor.</p>
         </div>
         <div class="step reveal">
-          <span class="step-number mono">03</span>
-          <span class="step-dot"></span>
+          <span class="step-number mono">03</span><span class="step-dot"></span>
           <h3>Müdahale</h3>
           <p>Gerekli bakım, onarım veya kurulum işlemi gerçekleştiriliyor.</p>
         </div>
         <div class="step reveal">
-          <span class="step-number mono">04</span>
-          <span class="step-dot"></span>
+          <span class="step-number mono">04</span><span class="step-dot"></span>
           <h3>Kontrol</h3>
           <p>İşlem sonrası cihazın çalışması tekrar kontrol ediliyor.</p>
         </div>
@@ -1309,82 +480,58 @@
     </div>
   </section>
 
-
   <!-- SERVICE AREA & CONTACT -->
-
   <section id="bolge" class="area">
     <div class="container area-grid">
       <div class="reveal">
         <div class="section-index mono">03 / İLETİŞİM & BÖLGE</div>
-        <h2 class="area-title">
-          Mersin.<br>
-          <span>Bizim saha.</span>
-        </h2>
-        <p class="area-copy">
-          Müşterilerimize hızlı ulaşabilmek için Mersin genelinde mobil servis araçlarımızla destek sağlıyoruz. Evinizde ya da iş yerinizde en hızlı teşhis için yanınızdayız.
-        </p>
+        <h2 class="area-title">Mersin.<br><span>Bizim saha.</span></h2>
+        <p class="area-copy">Müşterilerimize hızlı ulaşabilmek için Mersin genelinde mobil servis araçlarımızla destek sağlıyoruz. Evinizde ya da iş yerinizde en hızlı teşhis için yanınızdayız.</p>
         <div class="districts">
-          <span class="district">MEZİTLİ</span>
-          <span class="district">YENİŞEHİR</span>
-          <span class="district">AKDENİZ</span>
-          <span class="district">TOROSLAR</span>
-          <span class="district">MERSİN MERKEZ</span>
+          <span class="district">MEZİTLİ</span><span class="district">YENİŞEHİR</span>
+          <span class="district">AKDENİZ</span><span class="district">TOROSLAR</span><span class="district">MERSİN MERKEZ</span>
         </div>
-        
         <div class="contact-info">
           <div><strong>📍 Konum:</strong> Merkez mahallesi, Fındıkpınarı caddesi, 52067. Sk. No:18, 33330 Mezitli/Mersin</div>
           <div><strong>📞 Telefon:</strong> +90 543 202 99 19</div>
           <div><strong>🕒 Saatler:</strong> 7/24 Acil Servis Desteği</div>
         </div>
       </div>
-
       <div class="map reveal">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.8640865969696!2d34.5209311!3d36.7498333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15278ba5f4f16013%3A0xb8b6647c6fadd430!2sYavuz%20Klima%20Beyaz%20E%C5%9Fya%20%C3%96zel%20Servis!5e0!3m2!1sen!2str!4v1790543888985!5m2!1sen!2str" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
     </div>
   </section>
 
-
   <!-- CTA -->
-
   <section class="cta">
     <div class="container">
       <div class="cta-box reveal">
         <div class="mono">SERVİS GEREKİYORSA</div>
-        <h2>
-          Sorunu büyütmeden<br>
-          çözmeye <span>başlayalım.</span>
-        </h2>
-        <a href="tel:+905432029919" class="btn cta-white">
-          Yavuz Servis'i Ara ↗
-        </a>
+        <h2>Sorunu büyütmeden<br>çözmeye <span>başlayalım.</span></h2>
+        <a href="tel:+905432029919" class="btn cta-white">Yavuz Servis'i Ara ↗</a>
       </div>
     </div>
   </section>
 
 </main>
 
-
-<!-- FOOTER -->
 <footer>
   <div class="container">
-    
     <div class="footer-grid">
-      <!-- Marka / Logo -->
       <div class="footer-brand">
         <img src="logo.png" alt="Yavuz Klima Logo" class="brand-logo">
         <p>Mersin geneli hızlı ve güvenilir klima, beyaz eşya teknik servis hizmeti. Doğru teşhis ve temiz işçilikle yanınızdayız.</p>
       </div>
-      <!-- Menü -->
       <div class="footer-col">
         <h4>Hızlı Menü</h4>
         <div class="footer-links">
-          <a href="#hizmetler">Hizmetler</a>
-          <a href="#surec">Nasıl Çalışır?</a>
-          <a href="#bolge">İletişim & Bölge</a>
+          <a href="index.html#hizmetler">Hizmetler</a>
+          <a href="index.html#surec">Nasıl Çalışır?</a>
+          <a href="galeri.html">Galeri</a>
+          <a href="index.html#bolge">İletişim & Bölge</a>
         </div>
       </div>
-      <!-- İletişim -->
       <div class="footer-col">
         <h4>İletişim Bilgileri</h4>
         <div class="footer-contact">
@@ -1394,27 +541,19 @@
         </div>
       </div>
     </div>
-
-    <!-- Alt Kısım / Copyright -->
     <div class="footer-bottom">
       <span>© 2026 Yavuz Klima ve Beyaz Eşya Servis</span>
       <span>MERSİN · TEKNİK SERVİS</span>
     </div>
-
   </div>
 </footer>
 
-
 <script>
-
-  /* Navbar */
   const nav = document.getElementById("nav");
   window.addEventListener("scroll", () => {
     nav.classList.toggle("scrolled", window.scrollY > 30);
   }, { passive: true });
 
-
-  /* Scroll reveal */
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -1422,19 +561,11 @@
         observer.unobserve(entry.target);
       }
     });
-  }, {
-    threshold: .12
-  });
+  }, { threshold: .12 });
 
-  document
-    .querySelectorAll(".reveal")
-    .forEach(el => observer.observe(el));
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
-
-  /* Magnetic buttons */
-  document
-    .querySelectorAll(".btn-red, .nav-cta")
-    .forEach(button => {
+  document.querySelectorAll(".btn-red, .nav-cta").forEach(button => {
       button.addEventListener("mousemove", e => {
         if (window.innerWidth < 700) return;
         const rect = button.getBoundingClientRect();
@@ -1447,33 +578,19 @@
       });
     });
 
-
-  /* Service hover tilt */
-  document
-    .querySelectorAll(".service, .detailed-card")
-    .forEach(card => {
+  document.querySelectorAll(".service, .detailed-card").forEach(card => {
       card.addEventListener("mousemove", e => {
         if (window.innerWidth < 700) return;
         const rect = card.getBoundingClientRect();
         const x = (e.clientX - rect.left) / rect.width - .5;
         const y = (e.clientY - rect.top) / rect.height - .5;
-        
-        // Tilt animasyonunu detaylı kartlarda hafiflettik ki okuması zorlaşmasın
         let intensity = card.classList.contains('detailed-card') ? 0.7 : 1.5;
-        
-        card.style.transform =
-          `perspective(1000px)
-           rotateX(${y * -intensity}deg)
-           rotateY(${x * intensity}deg)
-           translateY(-4px)`;
+        card.style.transform = `perspective(1000px) rotateX(${y * -intensity}deg) rotateY(${x * intensity}deg) translateY(-4px)`;
       });
-
       card.addEventListener("mouseleave", () => {
         card.style.transform = "";
       });
     });
-
 </script>
-
 </body>
 </html>

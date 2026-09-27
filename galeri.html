@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Galeri | Yavuz Klima ve Beyaz Eşya Servis</title>
+  <meta name="description" content="Mersin klima servisi ve beyaz eşya teknik servis montaj ve onarım çalışmalarımızdan örnekler." />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --red: #d71920;
+      --red-dark: #b51218;
+      --black: #111111;
+      --text: #171717;
+      --muted: #6d6d6d;
+      --light: #f5f5f3;
+      --white: #ffffff;
+      --line: #dededb;
+      --soft-red: #fff1f1;
+      --max: 1240px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--white); color: var(--text); font-family: "Space Grotesk", sans-serif; overflow-x: hidden; }
+    body::selection { background: var(--red); color: white; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+    .container { width: min(var(--max), calc(100% - 40px)); margin: auto; }
+    .mono { font-family: "DM Mono", monospace; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+
+    /* ---------------- NAV ---------------- */
+    nav { position: fixed; z-index: 100; top: 0; left: 0; width: 100%; background: rgba(255,255,255,.9); backdrop-filter: blur(18px); border-bottom: 1px solid var(--line); }
+    .nav-inner { height: 78px; display: flex; align-items: center; justify-content: space-between; }
+    .brand { display: flex; align-items: center; gap: 11px; font-weight: 700; letter-spacing: -.04em; }
+    .brand-logo { height: 50px; width: auto; object-fit: contain; }
+    .nav-links { display: flex; gap: 32px; font-size: 13px; }
+    .nav-links a { color: #555; transition: .2s; }
+    .nav-links a:hover { color: var(--red); }
+    .nav-cta { background: var(--red); color: white; padding: 12px 18px; border-radius: 3px; font-size: 13px; font-weight: 600; transition: .25s; }
+    .nav-cta:hover { background: var(--red-dark); transform: translateY(-2px); }
+
+    /* ---------------- GALLERY HEADER ---------------- */
+    .page-header {
+      padding: 160px 0 60px;
+      text-align: center;
+      background: var(--light);
+      border-bottom: 1px solid var(--line);
+    }
+    .page-header h1 {
+      font-size: clamp(40px, 6vw, 65px);
+      letter-spacing: -.05em;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .page-header p {
+      color: var(--muted);
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* ---------------- GALLERY GRID ---------------- */
+    .gallery-section {
+      padding: 100px 0;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 20px;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+      aspect-ratio: 4/3;
+      border: 1px solid var(--line);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0; left: 0; width: 100%;
+      padding: 30px 20px 20px;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      color: white;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+    .gallery-overlay h4 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    .gallery-overlay span {
+      font-size: 12px;
+      color: #ccc;
+      font-family: "DM Mono", monospace;
+    }
+
+    /* ---------------- FOOTER ---------------- */
+    footer { background: var(--black); color: #777; padding: 80px 0 30px; font-size: 14px; margin-top: auto;}
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1.5fr; gap: 50px; padding-bottom: 50px; border-bottom: 1px solid #292929; margin-bottom: 30px; }
+    .footer-brand .brand-logo { height: 40px; margin-bottom: 20px; }
+    .footer-brand p { line-height: 1.6; max-width: 320px; }
+    .footer-col h4 { color: white; font-size: 16px; font-weight: 600; margin-bottom: 20px; }
+    .footer-links { display: flex; flex-direction: column; gap: 12px; }
+    .footer-links a { transition: .2s; width: fit-content; }
+    .footer-links a:hover { color: var(--red); transform: translateX(4px); }
+    .footer-contact { display: flex; flex-direction: column; gap: 12px; line-height: 1.5; }
+    .footer-contact a { color: white; transition: .2s; }
+    .footer-contact a:hover { color: var(--red); }
+    .footer-bottom { display: flex; justify-content: space-between; font-size: 11px; color: #666; }
+
+    /* ---------------- MOBILE ---------------- */
+    @media(max-width:850px) {
+      .container { width: min(var(--max), calc(100% - 28px)); }
+      .nav-links { display: none; }
+      .footer-grid { grid-template-columns: 1fr; gap: 45px; }
+      .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+      .footer-bottom { flex-direction: column; gap: 15px; align-items: center; text-align: center; }
+    }
+    @media(max-width:520px) {
+      .brand-sub { display: none; }
+      .nav-cta { padding: 10px 13px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+        <img src="logo.png" alt="Yavuz Klima Logo" class="brand-logo">
+    </a>
+    <div class="nav-links">
+      <a href="index.html#hizmetler">Hizmetler</a>
+      <a href="index.html#surec">Nasıl Çalışır?</a>
+      <a href="galeri.html" style="color: var(--red);">Galeri</a>
+      <a href="index.html#bolge">İletişim & Bölge</a>
+    </div>
+    <a href="tel:+905432029919" class="nav-cta">Servis Çağır →</a>
+  </div>
+</nav>
+
+<main>
+  
+  <header class="page-header">
+    <div class="container">
+      <div class="mono" style="color: var(--red); margin-bottom: 15px;">ÇALIŞMALARIMIZ</div>
+      <h1>Galeri</h1>
+      <p>Mersin genelinde gerçekleştirdiğimiz klima montaj, beyaz eşya onarım ve bakım çalışmalarımızdan kareler.</p>
+    </div>
+  </header>
+
+  <section class="gallery-section">
+    <div class="container gallery-grid">
+      
+      <!-- Resim 1 (Linkleri kendi fotoğraflarınızla değiştirebilirsiniz) -->
+      <div class="gallery-item">
+        <img src="kurulum.jpeg" alt="Klima Bakımı">
+        <div class="gallery-overlay">
+          <h4>Klima Bakım & Onarımı</h4>
+          <span>MEZİTLİ / MERSİN</span>
+        </div>
+      </div>
+
+      <!-- Resim 2 -->
+      <div class="gallery-item">
+        <img src="kapsamli-onarim.jpeg" alt="Beyaz Eşya Kart Tamiri">
+        <div class="gallery-overlay">
+          <h4>Anakart Değişimi</h4>
+          <span>YENİŞEHİR / MERSİN</span>
+        </div>
+      </div>
+
+      <!-- Resim 3 -->
+      <div class="gallery-item">
+        <img src="klima-servis.jpeg" alt="Çamaşır Makinesi Onarımı">
+        <div class="gallery-overlay">
+          <h4>Çamaşır Makinesi Tamiri</h4>
+          <span>TOROSLAR / MERSİN</span>
+        </div>
+      </div>
+
+      <!-- Resim 4 -->
+      <div class="gallery-item">
+        <img src="GALERI-YAVUZ-KLIMA/1.jpeg" alt="Klima Montajı">
+        <div class="gallery-overlay">
+          <h4>Klima Dış Ünite Montajı</h4>
+          <span>AKDENİZ / MERSİN</span>
+        </div>
+      </div>
+
+      <!-- Resim 5 -->
+      <div class="gallery-item">
+        <img src="GALERI-YAVUZ-KLIMA/2.jpeg" alt="Teknik Servis İşçilik">
+        <div class="gallery-overlay">
+          <h4>Hassas Arıza Tespiti</h4>
+          <span>MERSİN MERKEZ</span>
+        </div>
+      </div>
+
+      <!-- Resim 6 -->
+      <div class="gallery-item">
+        <img src="GALERI-YAVUZ-KLIMA/3.jpeg" alt="Buzdolabı Onarımı">
+        <div class="gallery-overlay">
+          <h4>Buzdolabı Motor Değişimi</h4>
+          <span>MEZİTLİ / MERSİN</span>
+        </div>
+      </div>
+
+
+      
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="logo.png" alt="Yavuz Klima Logo" class="brand-logo">
+        <p>Mersin geneli hızlı ve güvenilir klima, beyaz eşya teknik servis hizmeti. Doğru teşhis ve temiz işçilikle yanınızdayız.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Hızlı Menü</h4>
+        <div class="footer-links">
+          <a href="index.html#hizmetler">Hizmetler</a>
+          <a href="index.html#surec">Nasıl Çalışır?</a>
+          <a href="galeri.html">Galeri</a>
+          <a href="index.html#bolge">İletişim & Bölge</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>İletişim Bilgileri</h4>
+        <div class="footer-contact">
+          <span>📍 Merkez mah. Fındıkpınarı cad. 52067. Sk. No:18 Mezitli/Mersin</span>
+          <span>📞 <a href="tel:+905432029919">+90 543 202 99 19</a></span>
+          <span>🕒 7/24 Açık</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Yavuz Klima ve Beyaz Eşya Servis</span>
+      <span>MERSİN · TEKNİK SERVİS</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll(".btn-red, .nav-cta").forEach(button => {
+      button.addEventListener("mousemove", e => {
+        if (window.innerWidth < 700) return;
+        const rect = button.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        button.style.transform = `translate(${x * .08}px, ${y * .08}px)`;
+      });
+      button.addEventListener("mouseleave", () => {
+        button.style.transform = "";
+      });
+    });
+</script>
+
+</body>
+</html>
