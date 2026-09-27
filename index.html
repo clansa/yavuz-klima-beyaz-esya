@@ -1,1011 +1,1626 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yavuz Klima Beyaz Eşya Özel Servis | Mersin</title>
-<meta name="description" content="Mersin'de klima montajı, bakımı, gaz dolumu ve buzdolabı, çamaşır makinesi, bulaşık makinesi, fırın tamiri. Aynı gün yerinde servis, garantili işçilik.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- ================================================================
-  AI-ready structured data. Search assistants / AI crawlers read this
-  block to understand what the business is, where it is, and how to
-  contact it. Replace the placeholder phone/address/coords below with
-  the real ones before publishing.
-================================================================= -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["HVACBusiness", "HomeAndConstructionBusiness"],
-  "name": "Yavuz Klima Beyaz Eşya Özel Servis",
-  "image": "https://example.com/yavuz-servis-logo.jpg",
-  "url": "https://example.com",
-  "telephone": "+90-324-555-0142",
-  "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Kuvayi Milliye Cad. No: 45",
-    "addressLocality": "Yenişehir",
-    "addressRegion": "Mersin",
-    "postalCode": "33100",
-    "addressCountry": "TR"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 36.8121,
-    "longitude": 34.6415
-  },
-  "areaServed": ["Yenişehir", "Mezitli", "Toroslar", "Akdeniz", "Tarsus", "Erdemli"],
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-      "opens": "08:00",
-      "closes": "20:00"
+  <title>Yavuz Klima ve Beyaz Eşya Servis | Mersin Klima Servisi</title>
+  <meta name="description" content="Mersin klima servisi ve beyaz eşya teknik servis. Klima bakım, montaj, kurulum ve onarım hizmetleri. Mezitli, Yenişehir, Akdeniz ve Toroslar." />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --red: #d71920;
+      --red-dark: #b51218;
+      --black: #111111;
+      --text: #171717;
+      --muted: #6d6d6d;
+      --light: #f5f5f3;
+      --white: #ffffff;
+      --line: #dededb;
+      --soft-red: #fff1f1;
+      --max: 1240px;
     }
-  ],
-  "sameAs": []
-}
-</script>
 
-<style>
-  :root{
-    --paper: #EAE2CE;
-    --paper-dim: #DFD5B8;
-    --card: #F4EFE0;
-    --ink: #16262A;
-    --ink-soft: #3C4E51;
-    --teal: #1F6F6B;
-    --teal-deep: #10393A;
-    --teal-line: #2C8F89;
-    --copper: #B5652D;
-    --copper-light: #D98A46;
-    --mint: #8FD9C4;
-    --line: rgba(22,38,42,0.16);
-    --line-strong: rgba(22,38,42,0.32);
-    --shadow: 0 1px 0 rgba(22,38,42,0.06);
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    --font-display: 'Big Shoulders Display', sans-serif;
-    --font-body: 'IBM Plex Sans', -apple-system, sans-serif;
-    --font-mono: 'IBM Plex Mono', monospace;
-  }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  *{ box-sizing: border-box; margin:0; padding:0; }
+    body {
+      background: var(--white);
+      color: var(--text);
+      font-family: "Space Grotesk", sans-serif;
+      overflow-x: hidden;
+    }
 
-  html{ scroll-behavior:smooth; }
-  @media (prefers-reduced-motion: reduce){
-    html{ scroll-behavior:auto; }
-    *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
-  }
+    body::selection {
+      background: var(--red);
+      color: white;
+    }
 
-  body{
-    background: var(--paper);
-    color: var(--ink);
-    font-family: var(--font-body);
-    font-size: 16px;
-    line-height:1.55;
-    -webkit-font-smoothing: antialiased;
-  }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-  a{ color:inherit; text-decoration:none; }
-  img,svg{ display:block; max-width:100%; }
-  button{ font-family:inherit; cursor:pointer; }
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: auto;
+    }
 
-  :focus-visible{
-    outline: 2.5px solid var(--copper);
-    outline-offset: 3px;
-  }
+    .mono {
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
 
-  .wrap{
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 0 32px;
-  }
+    /* ---------------- NAV ---------------- */
 
-  /* subtle paper texture via layered radial noise-ish dots, cheap and static */
-  .grain{
-    position: fixed; inset:0; pointer-events:none; z-index: 2;
-    opacity: 0.035;
-    background-image: radial-gradient(circle at 1px 1px, #16262A 1px, transparent 0);
-    background-size: 3px 3px;
-    mix-blend-mode: multiply;
-  }
+    nav {
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255,255,255,.9);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid transparent;
+      transition: .3s;
+    }
 
-  /* ---------------- Header ---------------- */
-  header{
-    position: sticky; top:0; z-index: 40;
-    background: rgba(234,226,206,0.92);
-    backdrop-filter: blur(6px);
-    border-bottom: 1px solid var(--line);
-  }
-  .nav{
-    display:flex; align-items:center; justify-content:space-between;
-    height: 76px;
-  }
-  .brand{
-    display:flex; align-items:center; gap:12px;
-  }
-  .brand-mark{
-    width:40px; height:40px; flex-shrink:0;
-  }
-  .brand-text{
-    font-family: var(--font-display);
-    font-weight:700;
-    font-size: 1.28rem;
-    letter-spacing: 0.2px;
-    line-height:1.05;
-  }
-  .brand-text span{
-    display:block;
-    font-family: var(--font-body);
-    font-size:0.66rem;
-    font-weight:500;
-    color: var(--ink-soft);
-    letter-spacing: 0.4px;
-    margin-top:2px;
-  }
-  .nav-links{
-    display:flex; align-items:center; gap:34px;
-  }
-  .nav-links a{
-    font-size: 0.94rem;
-    font-weight:500;
-    color: var(--ink-soft);
-    position:relative;
-    padding: 6px 0;
-  }
-  .nav-links a::after{
-    content:'';
-    position:absolute; left:0; right:0; bottom:0;
-    height:2px; background: var(--copper);
-    transform: scaleX(0); transform-origin:left;
-    transition: transform 0.25s ease;
-  }
-  .nav-links a:hover::after{ transform: scaleX(1); }
+    nav.scrolled {
+      border-color: var(--line);
+    }
 
-  .nav-cta{
-    display:flex; align-items:center; gap:14px;
-  }
-  .phone-chip{
-    display:flex; align-items:center; gap:8px;
-    font-family: var(--font-mono);
-    font-size: 0.92rem;
-    font-weight:500;
-    color: var(--ink);
-    border: 1px solid var(--line-strong);
-    border-radius: 100px;
-    padding: 9px 16px;
-    background: var(--card);
-  }
-  .phone-chip svg{ width:15px; height:15px; }
-  .btn-primary{
-    background: var(--copper);
-    color: #FBF6EA;
-    border-radius: 100px;
-    padding: 10px 20px;
-    font-weight:600;
-    font-size:0.92rem;
-    border:none;
-    transition: transform 0.18s ease, background 0.18s ease;
-  }
-  .btn-primary:hover{ background: var(--copper-light); transform: translateY(-1px); }
+    .nav-inner {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-  .burger{ display:none; }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 700;
+      letter-spacing: -.04em;
+    }
 
-  /* ---------------- Hero ---------------- */
-  .hero{
-    position:relative;
-    padding: 76px 0 88px;
-    overflow:hidden;
-  }
-  .hero-grid{
-    display:grid;
-    grid-template-columns: 1.05fr 0.85fr;
-    gap: 56px;
-    align-items:center;
-  }
-  .ticket-tag{
-    display:inline-flex; align-items:center; gap:10px;
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-    color: var(--teal-deep);
-    border: 1px dashed var(--line-strong);
-    border-radius: 6px;
-    padding: 6px 12px;
-    margin-bottom: 22px;
-    background: rgba(255,255,255,0.35);
-  }
-  .ticket-tag .dot{
-    width:7px; height:7px; border-radius:50%;
-    background: var(--mint);
-    box-shadow: 0 0 0 3px rgba(143,217,196,0.35);
-  }
+    .brand-logo {
+      height: 50px; 
+      width: auto;
+      object-fit: contain;
+    }
 
-  .hero h1{
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: clamp(2.4rem, 5vw, 3.75rem);
-    line-height: 1.02;
-    letter-spacing: 0.2px;
-    color: var(--ink);
-    max-width: 12.5ch;
-  }
-  .hero h1 em{
-    font-style: normal;
-    color: var(--teal);
-  }
+    .brand-sub {
+      color: #777;
+      font-family: "DM Mono";
+      font-size: 9px;
+      letter-spacing: .1em;
+      margin-left: 2px;
+    }
 
-  .hero-sub{
-    margin-top: 22px;
-    font-size: 1.08rem;
-    color: var(--ink-soft);
-    max-width: 46ch;
-  }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      font-size: 13px;
+    }
 
-  .hero-actions{
-    display:flex; gap:14px; margin-top: 34px; flex-wrap:wrap;
-  }
-  .btn-call{
-    display:inline-flex; align-items:center; gap:10px;
-    background: var(--teal-deep);
-    color: #F4EFE0;
-    padding: 15px 26px;
-    border-radius: 8px;
-    font-weight:600;
-    font-size: 1rem;
-    transition: transform 0.18s ease, box-shadow 0.18s ease;
-    box-shadow: 3px 3px 0 var(--copper);
-  }
-  .btn-call svg{ width:18px; height:18px; }
-  .btn-call:hover{ transform: translate(-2px,-2px); box-shadow: 5px 5px 0 var(--copper); }
+    .nav-links a {
+      color: #555;
+      transition: .2s;
+    }
 
-  .btn-wa{
-    display:inline-flex; align-items:center; gap:10px;
-    background: transparent;
-    color: var(--ink);
-    padding: 15px 22px;
-    border-radius: 8px;
-    font-weight:600;
-    font-size: 1rem;
-    border: 1.5px solid var(--line-strong);
-    transition: border-color 0.18s ease, background 0.18s ease;
-  }
-  .btn-wa svg{ width:18px; height:18px; }
-  .btn-wa:hover{ border-color: var(--teal); background: rgba(31,111,107,0.06); }
+    .nav-links a:hover {
+      color: var(--red);
+    }
 
-  .hero-stats{
-    display:flex; gap: 0;
-    margin-top: 46px;
-    border-top: 1px solid var(--line-strong);
-    padding-top: 22px;
-  }
-  .hero-stats .stat{
-    flex:1;
-    padding-right: 20px;
-    border-right: 1px solid var(--line);
-  }
-  .hero-stats .stat:last-child{ border-right:none; }
-  .stat-num{
-    font-family: var(--font-display);
-    font-size: 2.1rem;
-    font-weight: 700;
-    color: var(--teal-deep);
-    line-height:1;
-  }
-  .stat-label{
-    font-size: 0.8rem;
-    color: var(--ink-soft);
-    margin-top: 6px;
-  }
+    .nav-cta {
+      background: var(--red);
+      color: white;
+      padding: 12px 18px;
+      border-radius: 3px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: .25s;
+    }
 
-  /* ---- gauge dial ---- */
-  .dial-wrap{
-    position:relative;
-    display:flex; justify-content:center; align-items:center;
-  }
-  .dial-card{
-    background: var(--teal-deep);
-    border-radius: 18px;
-    padding: 34px 30px 28px;
-    width: 100%;
-    max-width: 400px;
-    position:relative;
-    box-shadow: 8px 8px 0 rgba(22,38,42,0.1);
-  }
-  .dial-card::before{
-    content:'SERVİS FİŞİ #04521';
-    position:absolute; top:16px; left:30px;
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    letter-spacing: 0.5px;
-    color: rgba(244,239,224,0.45);
-  }
-  .dial-card::after{
-    content:'DURUM: MÜSAİT';
-    position:absolute; top:16px; right:30px;
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    letter-spacing: 0.5px;
-    color: var(--mint);
-  }
-  .dial-svg{ width:100%; height:auto; margin-top: 22px; }
-  .dial-needle{
-    transform-origin: 150px 150px;
-    animation: sweep 1.6s cubic-bezier(.22,1.6,.4,1) 0.3s both;
-  }
-  @keyframes sweep{
-    from{ transform: rotate(-95deg); }
-    to{ transform: rotate(0deg); }
-  }
-  .dial-readout{
-    text-align:center;
-    margin-top: 6px;
-  }
-  .dial-readout .temp{
-    font-family: var(--font-mono);
-    font-size: 2rem;
-    color: var(--mint);
-    letter-spacing: 1px;
-  }
-  .dial-readout .caption{
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    color: rgba(244,239,224,0.55);
-    margin-top: 4px;
-  }
+    .nav-cta:hover {
+      background: var(--red-dark);
+      transform: translateY(-2px);
+    }
 
-  /* ---------------- Section shell ---------------- */
-  section{ padding: 90px 0; }
-  .section-head{
-    display:flex; justify-content:space-between; align-items:flex-end;
-    gap: 40px;
-    margin-bottom: 48px;
-    border-bottom: 1px solid var(--line-strong);
-    padding-bottom: 22px;
-  }
-  .section-head h2{
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: clamp(1.9rem, 3.4vw, 2.6rem);
-    max-width: 14ch;
-  }
-  .section-head p{
-    color: var(--ink-soft);
-    max-width: 34ch;
-    font-size: 0.98rem;
-  }
-  .section-num{
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    color: var(--copper);
-  }
+    /* ---------------- HERO ---------------- */
 
-  /* ---------------- Services / pegboard ---------------- */
-  .pegboard{
-    background: var(--paper-dim);
-    border-radius: 20px;
-    padding: 6px;
-  }
-  .peg-grid{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    background: var(--line-strong);
-    border-radius: 16px;
-    overflow:hidden;
-  }
-  .peg{
-    background: var(--card);
-    padding: 34px 26px 30px;
-    position:relative;
-    opacity: 0;
-    transform: translateY(14px) rotate(-1.4deg);
-    transition: transform 0.5s cubic-bezier(.2,.9,.3,1.2), opacity 0.5s ease, box-shadow 0.25s ease;
-    transition-delay: calc(var(--i) * 70ms);
-  }
-  .peg.in-view{ opacity:1; transform: translateY(0) rotate(0deg); }
-  .peg:hover{ box-shadow: inset 0 0 0 1.5px var(--teal); }
-  .peg-hook{
-    position:absolute; top:12px; right:18px;
-    width: 22px; height: 22px;
-    border: 1.6px dashed var(--line-strong);
-    border-radius: 50%;
-  }
-  .peg-icon{
-    width: 42px; height:42px;
-    color: var(--teal);
-    margin-bottom: 18px;
-  }
-  .peg h3{
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 1.28rem;
-    margin-bottom: 8px;
-  }
-  .peg p{
-    font-size: 0.9rem;
-    color: var(--ink-soft);
-  }
+    .hero {
+      min-height: 100vh;
+      padding-top: 140px;
+      padding-bottom: 80px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.025) 1px, transparent 1px),
+        linear-gradient(rgba(0,0,0,.025) 1px, transparent 1px);
+      background-size: 80px 80px;
+    }
 
-  /* ---------------- Why us ---------------- */
-  .why{
-    display:grid;
-    grid-template-columns: 0.85fr 1.15fr;
-    gap: 60px;
-    align-items:start;
-  }
-  .why-list{
-    display:flex; flex-direction:column;
-    border-top: 1px solid var(--line-strong);
-  }
-  .why-item{
-    display:grid;
-    grid-template-columns: 46px 1fr;
-    gap: 18px;
-    padding: 22px 0;
-    border-bottom: 1px solid var(--line-strong);
-  }
-  .why-item svg{ width:26px; height:26px; color: var(--copper); margin-top:2px; }
-  .why-item h4{ font-size: 1.02rem; font-weight:600; margin-bottom:4px; }
-  .why-item p{ font-size: 0.9rem; color: var(--ink-soft); }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 70px;
+      align-items: center;
+    }
 
-  .why-panel{
-    background: var(--teal-deep);
-    color: var(--paper);
-    border-radius: 18px;
-    padding: 38px;
-  }
-  .why-panel h3{
-    font-family: var(--font-display);
-    font-size: 1.6rem;
-    font-weight:700;
-    margin-bottom: 18px;
-    max-width: 20ch;
-  }
-  .process-list{ counter-reset: step; margin-top: 22px; }
-  .process-item{
-    display:flex; gap:16px;
-    padding: 16px 0;
-    border-top: 1px solid rgba(244,239,224,0.16);
-  }
-  .process-item:first-child{ border-top:none; }
-  .process-num{
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    color: var(--mint);
-    width: 26px; flex-shrink:0;
-  }
-  .process-item p{ font-size: 0.92rem; color: rgba(244,239,224,0.85); }
-  .process-item strong{ display:block; font-weight:600; color: var(--paper); margin-bottom:2px; }
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--red);
+      margin-bottom: 25px;
+    }
 
-  /* ---------------- Service area ---------------- */
-  .area{
-    display:grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 44px;
-    align-items:stretch;
-  }
-  .map-frame{
-    border-radius: 16px;
-    overflow:hidden;
-    border: 1px solid var(--line-strong);
-    min-height: 360px;
-    filter: sepia(8%) saturate(85%) contrast(96%);
-  }
-  .map-frame iframe{ width:100%; height:100%; min-height:360px; border:0; display:block; }
-  .area-side{
-    display:flex; flex-direction:column; justify-content:space-between;
-  }
-  .chip-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top: 20px; }
-  .chip{
-    font-family: var(--font-mono);
-    font-size: 0.82rem;
-    border: 1px solid var(--line-strong);
-    border-radius: 100px;
-    padding: 8px 14px;
-    color: var(--ink-soft);
-  }
-  .area-note{
-    margin-top: 28px;
-    border-left: 3px solid var(--copper);
-    padding-left: 16px;
-    font-size: 0.92rem;
-    color: var(--ink-soft);
-  }
+    .eyebrow-line {
+      width: 32px;
+      height: 2px;
+      background: var(--red);
+    }
 
-  /* ---------------- Testimonials ---------------- */
-  .tickets{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-  }
-  .ticket{
-    background: var(--card);
-    border: 1px solid var(--line-strong);
-    border-radius: 4px;
-    padding: 26px 24px;
-    position:relative;
-  }
-  .ticket:nth-child(1){ transform: rotate(-1.1deg); }
-  .ticket:nth-child(2){ transform: rotate(0.6deg); }
-  .ticket:nth-child(3){ transform: rotate(-0.4deg); }
-  .ticket::before{
-    content:'';
-    position:absolute; top:-7px; left:26px;
-    width: 14px; height:14px;
-    background: var(--copper-light);
-    border-radius:50%;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.25);
-  }
-  .ticket-quote{ font-size: 0.95rem; color: var(--ink); margin-bottom:16px; }
-  .ticket-meta{
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-    color: var(--ink-soft);
-    display:flex; justify-content:space-between;
-    border-top: 1px dashed var(--line-strong);
-    padding-top: 12px;
-  }
+    h1 {
+      font-size: clamp(60px, 8vw, 110px);
+      line-height: .84;
+      letter-spacing: -.08em;
+      font-weight: 600;
+      max-width: 850px;
+    }
 
-  /* ---------------- CTA banner ---------------- */
-  .cta-band{
-    background: var(--copper);
-    border-radius: 20px;
-    padding: 48px 52px;
-    display:flex; align-items:center; justify-content:space-between; gap: 30px;
-    flex-wrap:wrap;
-  }
-  .cta-band h3{
-    font-family: var(--font-display);
-    font-size: clamp(1.6rem, 3vw, 2.1rem);
-    font-weight:700;
-    color: #FBF6EA;
-    max-width: 20ch;
-  }
-  .cta-band .btn-call{
-    background: var(--teal-deep);
-    box-shadow: 3px 3px 0 rgba(16,57,58,0.5);
-  }
-  .cta-band .btn-call:hover{ box-shadow: 5px 5px 0 rgba(16,57,58,0.5); }
+    h1 span {
+      color: var(--red);
+    }
 
-  /* ---------------- Footer ---------------- */
-  footer{
-    background: var(--teal-deep);
-    color: rgba(244,239,224,0.7);
-    padding: 60px 0 30px;
-    margin-top: 40px;
-  }
-  .foot-grid{
-    display:grid;
-    grid-template-columns: 1.3fr 1fr 1fr;
-    gap: 40px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid rgba(244,239,224,0.14);
-  }
-  .foot-brand{ display:flex; align-items:center; gap:12px; margin-bottom:14px; }
-  .foot-brand .brand-text{ color: #F4EFE0; }
-  .foot-brand span{ color: rgba(244,239,224,0.5); }
-  footer h5{
-    font-size: 0.78rem;
-    color: rgba(244,239,224,0.45);
-    font-weight:600;
-    letter-spacing:0.3px;
-    margin-bottom: 14px;
-  }
-  footer ul{ list-style:none; display:flex; flex-direction:column; gap:9px; }
-  footer a{ font-size: 0.9rem; }
-  footer a:hover{ color: var(--mint); }
-  .foot-bottom{
-    display:flex; justify-content:space-between; padding-top: 22px;
-    font-size: 0.8rem; color: rgba(244,239,224,0.4);
-    flex-wrap:wrap; gap:10px;
-  }
+    .hero-copy {
+      max-width: 530px;
+      margin-top: 34px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.75;
+    }
 
-  /* ---------------- Floating action ---------------- */
-  .fab{
-    position: fixed; right: 22px; bottom: 22px; z-index: 50;
-    display:flex; flex-direction:column; gap:10px; align-items:flex-end;
-  }
-  .fab-btn{
-    width: 56px; height:56px; border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
-    background: var(--teal-deep);
-    color:#F4EFE0;
-    box-shadow: 0 6px 16px rgba(16,57,58,0.35);
-    position:relative;
-  }
-  .fab-btn svg{ width:24px; height:24px; }
-  .fab-btn::after{
-    content:'';
-    position:absolute; inset:-4px;
-    border-radius:50%;
-    border: 1.5px solid var(--mint);
-    opacity:0.6;
-    animation: pulse 2.4s ease-out infinite;
-  }
-  @keyframes pulse{
-    0%{ transform:scale(0.9); opacity:0.6; }
-    100%{ transform:scale(1.35); opacity:0; }
-  }
+    .hero-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
 
-  /* ---------------- Reveal on scroll (sections) ---------------- */
-  .reveal{ opacity:0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
-  .reveal.in-view{ opacity:1; transform:none; }
+    .btn {
+      min-height: 52px;
+      padding: 0 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 3px;
+      transition: .3s;
+    }
 
-  /* ---------------- Responsive ---------------- */
-  @media (max-width: 960px){
-    .hero-grid{ grid-template-columns: 1fr; gap: 44px; }
-    .why{ grid-template-columns: 1fr; }
-    .area{ grid-template-columns: 1fr; }
-    .tickets{ grid-template-columns: 1fr; }
-    .foot-grid{ grid-template-columns: 1fr 1fr; }
+    .btn-red {
+      background: var(--red);
+      color: white;
+    }
+
+    .btn-red:hover {
+      background: var(--red-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(215,25,32,.18);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--line);
+      background: white;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--red);
+      color: var(--red);
+      transform: translateY(-3px);
+    }
+
+    /* ---------------- HERO VISUAL ---------------- */
+
+    .hero-visual {
+      height: 520px;
+      position: relative;
+    }
+
+    .visual-frame {
+      position: absolute;
+      inset: 35px 0 0 35px;
+      border: 1px solid var(--line);
+      background: #eeeeeb;
+      overflow: hidden;
+    }
+
+    .visual-frame::before {
+      content: "KLİMA / 01";
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      font: 10px "DM Mono";
+      color: #777;
+      letter-spacing: .1em;
+      z-index: 2;
+    }
+
+    .visual-frame::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      right: -100px;
+      bottom: -100px;
+      border: 1px solid rgba(215,25,32,.2);
+      border-radius: 50%;
+    }
+
+    .ac-unit {
+      position: absolute;
+      width: 78%;
+      height: 170px;
+      top: 125px;
+      left: 11%;
+      background: linear-gradient(145deg,#fff,#d8d8d5);
+      border: 1px solid #c9c9c5;
+      border-radius: 18px 18px 8px 8px;
+      box-shadow: 0 30px 50px rgba(0,0,0,.12);
+      transform: rotate(-4deg);
+      animation: floating 5s ease-in-out infinite;
+    }
+
+    .ac-unit::before {
+      content: "YAVUZ";
+      position: absolute;
+      right: 30px;
+      top: 25px;
+      font: 10px "DM Mono";
+      letter-spacing: .14em;
+      color: #777;
+    }
+
+    .ac-unit::after {
+      content: "";
+      position: absolute;
+      left: 35px;
+      right: 35px;
+      bottom: 30px;
+      height: 4px;
+      background: #c8c8c5;
+      box-shadow:
+        0 9px 0 #d2d2cf,
+        0 18px 0 #d9d9d6;
+    }
+
+    .air {
+      position: absolute;
+      width: 4px;
+      height: 80px;
+      background: linear-gradient(to bottom, rgba(215,25,32,.4), transparent);
+      bottom: 35px;
+      border-radius: 5px;
+      animation: air 2.5s infinite ease-in-out;
+    }
+
+    .air:nth-child(1) { left: 35%; animation-delay: .2s; }
+    .air:nth-child(2) { left: 48%; animation-delay: .5s; }
+    .air:nth-child(3) { left: 61%; animation-delay: .8s; }
+
+    @keyframes floating {
+      0%,100% { transform: rotate(-4deg) translateY(0); }
+      50% { transform: rotate(-2deg) translateY(-12px); }
+    }
+
+    @keyframes air {
+      0%,100% { opacity: .2; transform: translateY(0); }
+      50% { opacity: .7; transform: translateY(15px); }
+    }
+
+    .visual-label {
+      position: absolute;
+      bottom: 30px;
+      left: -5px;
+      background: var(--red);
+      color: white;
+      padding: 22px 27px;
+      width: 230px;
+      z-index: 3;
+    }
+
+    .visual-label strong {
+      display: block;
+      font-size: 30px;
+      letter-spacing: -.06em;
+      margin-bottom: 5px;
+    }
+
+    .visual-label small {
+      font-size: 11px;
+      opacity: .8;
+    }
+
+    /* ---------------- TRUST ---------------- */
+
+    .trust {
+      background: var(--black);
+      color: white;
+      border-top: 4px solid var(--red);
+    }
+
+    .trust-inner {
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .trust-item {
+      font-size: 12px;
+      color: #aaa;
+      white-space: nowrap;
+    }
+
+    .trust-item strong {
+      color: white;
+      font-size: 17px;
+      margin-right: 6px;
+    }
+
+    /* ---------------- GENERAL ---------------- */
+
+    section {
+      padding: 140px 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: .55fr 1.45fr;
+      gap: 40px;
+      margin-bottom: 65px;
+    }
+
+    .section-index {
+      color: var(--red);
+    }
+
+    .section-title {
+      font-size: clamp(42px, 5vw, 72px);
+      line-height: .92;
+      letter-spacing: -.065em;
+      font-weight: 600;
+    }
+
+    .section-title span {
+      color: #aaa;
+    }
+
+    /* ---------------- SERVICES ---------------- */
+
+    #hizmetler {
+      background: var(--light);
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 14px;
+    }
+
+    .service {
+      position: relative;
+      overflow: hidden;
+      background: white;
+      border: 1px solid var(--line);
+      transition: .4s;
+    }
+
+    .service:hover {
+      transform: translateY(-6px);
+      border-color: #c9c9c6;
+      box-shadow: 0 20px 50px rgba(0,0,0,.07);
+    }
+
+    .service-big {
+      min-height: 500px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .service-side {
+      display: grid;
+      gap: 14px;
+    }
+
+    .service-small {
+      min-height: 243px;
+      padding: 30px;
+    }
+
+    .service-number {
+      color: #999;
+    }
+
+    .service-icon {
+      width: 55px;
+      height: 55px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      color: var(--red);
+      font-size: 20px;
+      transition: .4s;
+    }
+
+    .service:hover .service-icon {
+      background: var(--red);
+      color: white;
+      border-color: var(--red);
+      transform: rotate(-8deg);
+    }
+
+    .service h3 {
+      font-size: 32px;
+      letter-spacing: -.055em;
+      margin-top: 25px;
+    }
+
+    .service-small h3 {
+      font-size: 24px;
+      margin-top: 35px;
+    }
+
+    .service p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+      max-width: 460px;
+      margin-top: 12px;
+    }
+
+    .service-link {
+      display: inline-flex;
+      gap: 9px;
+      color: var(--red);
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 22px;
+    }
+
+    .service-link span {
+      transition: .25s;
+    }
+
+    .service:hover .service-link span {
+      transform: translateX(6px);
+    }
+
+    /* ---------------- SEO SERVICES GRID ---------------- */
+    .seo-categories {
+      margin-top: 100px;
+    }
+
+    .seo-categories-head h3 {
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: -.04em;
+      margin-bottom: 15px;
+    }
+
+    .seo-categories-head p {
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 600px;
+      line-height: 1.6;
+      margin-bottom: 50px;
+    }
+
+    .category-block {
+      margin-bottom: 60px;
+    }
+
+    .category-block > h4 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .category-block > h4::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: var(--red);
+      border-radius: 50%;
+    }
+
+    .seo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 15px;
+    }
+
+    .seo-card {
+      background: white;
+      border: 1px solid var(--line);
+      padding: 24px;
+      border-radius: 4px;
+      transition: .3s;
+    }
+
+    .seo-card:hover {
+      border-color: var(--red);
+      transform: translateY(-4px);
+      box-shadow: 0 15px 30px rgba(0,0,0,.04);
+    }
+
+    .seo-card h5 {
+      font-size: 15px;
+      color: var(--black);
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .seo-card p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* ---------------- PROCESS ---------------- */
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+    .step {
+      min-height: 260px;
+      padding: 30px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      transition: .3s;
+    }
+
+    .step:hover {
+      background: var(--soft-red);
+    }
+
+    .step-number {
+      color: var(--red);
+    }
+
+    .step h3 {
+      font-size: 22px;
+      letter-spacing: -.04em;
+      margin-top: 75px;
+    }
+
+    .step p {
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 13px;
+      max-width: 230px;
+      margin-top: 10px;
+    }
+
+    .step-dot {
+      position: absolute;
+      right: 28px;
+      top: 30px;
+      width: 7px;
+      height: 7px;
+      background: var(--red);
+      border-radius: 50%;
+    }
+
+    /* ---------------- AREA ---------------- */
+
+    .area {
+      background: var(--black);
+      color: white;
+    }
+
+    .area-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 100px;
+      align-items: center;
+    }
+
+    .area-title {
+      font-size: clamp(55px, 7vw, 95px);
+      line-height: .86;
+      letter-spacing: -.075em;
+    }
+
+    .area-title span {
+      color: var(--red);
+    }
+
+    .area-copy {
+      color: #999;
+      max-width: 470px;
+      line-height: 1.7;
+      margin: 30px 0;
+    }
+
+    .districts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 35px;
+    }
+
+    .district {
+      border: 1px solid #333;
+      padding: 9px 13px;
+      color: #bbb;
+      font: 10px "DM Mono";
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      color: #bbb;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .contact-info strong {
+      color: white;
+      font-weight: 500;
+    }
+
+    .map {
+      height: 470px;
+      position: relative;
+      border: 1px solid #333;
+      overflow: hidden;
+      background: #111;
+    }
+    
+    .map iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* ---------------- CTA ---------------- */
+
+    .cta {
+      padding-bottom: 150px;
+    }
+
+    .cta-box {
+      min-height: 420px;
+      position: relative;
+      overflow: hidden;
+      background: var(--red);
+      color: white;
+      padding: 60px;
+    }
+
+    .cta-box::after {
+      content: "Y";
+      position: absolute;
+      right: -30px;
+      bottom: -130px;
+      font-size: 480px;
+      line-height: 1;
+      font-weight: 700;
+      color: rgba(0,0,0,.08);
+      pointer-events: none;
+    }
+
+    .cta-box h2 {
+      font-size: clamp(50px, 7vw, 90px);
+      line-height: .86;
+      letter-spacing: -.075em;
+      max-width: 800px;
+      margin: 22px 0 35px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-white {
+      background: white;
+      color: var(--red);
+    }
+
+    .cta-white:hover {
+      background: #f2f2f2;
+    }
+
+    /* ---------------- FOOTER ---------------- */
+
+    footer {
+      background: var(--black);
+      color: #777;
+      padding: 80px 0 30px;
+      font-size: 14px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1.5fr;
+      gap: 50px;
+      padding-bottom: 50px;
+      border-bottom: 1px solid #292929;
+      margin-bottom: 30px;
+    }
+
+    .footer-brand .brand-logo {
+      height: 40px;
+      margin-bottom: 20px;
+    }
+
+    .footer-brand p {
+      line-height: 1.6;
+      max-width: 320px;
+    }
+
+    .footer-col h4 {
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      transition: .2s;
+      width: fit-content;
+    }
+
+    .footer-links a:hover {
+      color: var(--red);
+      transform: translateX(4px);
+    }
+
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      line-height: 1.5;
+    }
+
+    .footer-contact a {
+      color: white;
+      transition: .2s;
+    }
+
+    .footer-contact a:hover {
+      color: var(--red);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: #666;
+    }
+
+    /* ---------------- MOBILE ---------------- */
+
+    @media(max-width:850px) {
+
+      .container {
+        width: min(var(--max), calc(100% - 28px));
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 120px;
+      }
+
+      .hero-grid,
+      .services,
+      .area-grid,
+      .section-head,
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      h1 {
+        font-size: clamp(55px, 16vw, 90px);
+      }
+
+      .hero-visual {
+        height: 400px;
+      }
+
+      .visual-frame {
+        inset: 20px 0 0 20px;
+      }
+
+      section {
+        padding: 100px 0;
+      }
+
+      .trust-inner {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 20px 0;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .map {
+        height: 340px;
+      }
+
+      .cta-box {
+        padding: 40px 25px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    @media(max-width:520px) {
+
+      .brand-sub {
+        display: none;
+      }
+
+      .nav-cta {
+        padding: 10px 13px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-big {
+        min-height: 420px;
+      }
+
+      .cta-box::after {
+        font-size: 250px;
+      }
+
+      .seo-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Yavuz Klima ve Beyaz Eşya Servis",
+    "description": "Mersin klima ve beyaz eşya teknik servis hizmetleri.",
+    "telephone": "+905432029919",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Merkez mahallesi, Fındıkpınarı caddesi, 52067. Sk. No:18",
+      "addressLocality": "Mezitli",
+      "addressRegion": "Mersin",
+      "postalCode": "33330",
+      "addressCountry": "TR"
+    },
+    "openingHours": "Mo-Su 00:00-23:59",
+    "areaServed": [
+      "Mersin",
+      "Mezitli",
+      "Yenişehir",
+      "Akdeniz",
+      "Toroslar"
+    ],
+    "serviceType": [
+      "Klima Servisi",
+      "Klima Montajı",
+      "Klima Bakımı",
+      "Klima Onarımı",
+      "Beyaz Eşya Servisi",
+      "Buzdolabı Tamiri",
+      "Çamaşır Makinesi Tamiri",
+      "Bulaşık Makinesi Tamiri"
+    ]
   }
-  @media (max-width: 760px){
-    .nav-links{ display:none; }
-    .peg-grid{ grid-template-columns: 1fr; }
-    .hero-stats{ flex-wrap:wrap; row-gap:18px; }
-    .hero-stats .stat{ flex: 1 1 45%; border-right:none; }
-    .cta-band{ flex-direction:column; align-items:flex-start; }
-    .foot-grid{ grid-template-columns: 1fr; }
-    .wrap{ padding: 0 20px; }
-    .phone-chip{ display:none; }
-  }
-</style>
+  </script>
 </head>
-<body>
-<div class="grain"></div>
 
-<header>
-  <div class="wrap nav">
-    <div class="brand">
-      <svg class="brand-mark" viewBox="0 0 40 40" fill="none">
-        <rect x="1" y="1" width="38" height="38" rx="8" stroke="#16262A" stroke-width="1.6"/>
-        <path d="M20 9v22M11 14l18 12M29 14L11 26" stroke="#1F6F6B" stroke-width="2" stroke-linecap="round"/>
-        <circle cx="20" cy="20" r="4" fill="#B5652D"/>
-      </svg>
-      <div class="brand-text">Yavuz Servis<span>Klima &amp; Beyaz Eşya · Mersin</span></div>
-    </div>
-    <nav class="nav-links">
+<body>
+
+<nav id="nav">
+  <div class="container nav-inner">
+
+    <a href="#" class="brand">
+        <img src="logo.png" alt="Yavuz Klima Logo" class="brand-logo">
+    </a>
+
+    <div class="nav-links">
       <a href="#hizmetler">Hizmetler</a>
-      <a href="#neden-biz">Neden Biz</a>
-      <a href="#bolge">Hizmet Bölgesi</a>
-      <a href="#iletisim">İletişim</a>
-    </nav>
-    <div class="nav-cta">
-      <a class="phone-chip" href="tel:+903245550142">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.284 6.716 15 15 15l3-4-6-3-2 2a12 12 0 0 1-6-6l2-2-3-6-4 3z"/></svg>
-        0324 555 01 42
-      </a>
-      <a class="btn-primary" href="https://wa.me/903245550142" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="#surec">Nasıl Çalışır?</a>
+      <a href="#bolge">İletişim & Bölge</a>
     </div>
+
+    <a href="tel:+905432029919" class="nav-cta">
+      Servis Çağır →
+    </a>
+
   </div>
-</header>
+</nav>
+
 
 <main>
-  <!-- ============ HERO ============ -->
+
+  <!-- HERO -->
+
   <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <div class="ticket-tag"><span class="dot"></span> Mersin merkez içi aynı gün servis</div>
-        <h1>Klima ve beyaz eşya arızasına <em>yerinde</em> çözüm.</h1>
-        <p class="hero-sub">Yenişehir'den Erdemli'ye, ustamız kapınızda. Klima montajından buzdolabı kompresörüne, bulaşık makinesinden fırına kadar tüm arızalara net fiyat, garantili işçilik.</p>
-        <div class="hero-actions">
-          <a class="btn-call" href="tel:+903245550142">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.284 6.716 15 15 15l3-4-6-3-2 2a12 12 0 0 1-6-6l2-2-3-6-4 3z"/></svg>
-            Hemen Ara
-          </a>
-          <a class="btn-wa" href="https://wa.me/903245550142" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.55L3 20l1.05-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg>
-            WhatsApp'tan Yaz
-          </a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat"><div class="stat-num" data-count="14">0</div><div class="stat-label">yıl saha tecrübesi</div></div>
-          <div class="stat"><div class="stat-num" data-count="6200" data-suffix="+">0</div><div class="stat-label">tamamlanan servis</div></div>
-          <div class="stat"><div class="stat-num" data-count="98" data-suffix="%">0</div><div class="stat-label">aynı gün çözüm oranı</div></div>
-        </div>
-      </div>
 
-      <div class="dial-wrap">
-        <div class="dial-card">
-          <svg class="dial-svg" viewBox="0 0 300 190">
-            <path d="M40 155 A110 110 0 0 1 260 155" fill="none" stroke="rgba(244,239,224,0.14)" stroke-width="14" stroke-linecap="round"/>
-            <path d="M40 155 A110 110 0 0 1 150 45" fill="none" stroke="#2C8F89" stroke-width="14" stroke-linecap="round"/>
-            <path d="M150 45 A110 110 0 0 1 260 155" fill="none" stroke="#B5652D" stroke-width="14" stroke-linecap="round" opacity="0.45"/>
-            <g class="dial-needle" stroke="#F4EFE0" stroke-linecap="round">
-              <line x1="150" y1="155" x2="150" y2="58" stroke-width="3"/>
-            </g>
-            <circle cx="150" cy="155" r="9" fill="#F4EFE0"/>
-            <circle cx="150" cy="155" r="4" fill="#10393A"/>
-          </svg>
-          <div class="dial-readout">
-            <div class="temp">18°C — Soğutuyor</div>
-            <div class="caption">Son teşhis: klima gaz basıncı normal</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <div class="container hero-grid">
 
-  <!-- ============ SERVICES ============ -->
-  <section id="hizmetler">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div>
-          <div class="section-num">Hizmetlerimiz</div>
-          <h2>Tek ustadan klima ve beyaz eşyanın tamamı</h2>
-        </div>
-        <p>Her arıza için ayrı usta aramayın. Montajdan yedek parçaya tüm süreci tek ekip yürütür.</p>
-      </div>
-
-      <div class="pegboard reveal">
-        <div class="peg-grid">
-          <div class="peg" style="--i:0">
-            <div class="peg-hook"></div>
-            <svg class="peg-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
-              <rect x="6" y="14" width="36" height="14" rx="2"/>
-              <path d="M12 28v4M36 28v4M18 20h4M26 20h4"/>
-              <path d="M20 34c-3 2-3 6 0 8M28 34c3 2 3 6 0 8"/>
-            </svg>
-            <h3>Klima Montaj &amp; Bakım</h3>
-            <p>Split klima montajı, periyodik bakım ve filtre temizliği; taşınma öncesi söküp-takma dahil.</p>
-          </div>
-          <div class="peg" style="--i:1">
-            <div class="peg-hook"></div>
-            <svg class="peg-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M24 6c5 6 8 10 8 15a8 8 0 1 1-16 0c0-5 3-9 8-15z"/>
-              <path d="M24 21v9"/>
-            </svg>
-            <h3>Klima Gaz Dolumu</h3>
-            <p>Soğutmuyor, su damlatıyor ya da garaj yapıyor şikayetlerinde teşhis ve gaz dolumu.</p>
-          </div>
-          <div class="peg" style="--i:2">
-            <div class="peg-hook"></div>
-            <svg class="peg-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
-              <rect x="8" y="6" width="32" height="36" rx="3"/>
-              <circle cx="24" cy="25" r="10"/>
-              <circle cx="24" cy="25" r="4"/>
-              <path d="M14 12h2M20 12h2"/>
-            </svg>
-            <h3>Çamaşır Makinesi Tamiri</h3>
-            <p>Motor, pompa, kapak kilidi ve elektronik kart arızalarında aynı gün parça temini.</p>
-          </div>
-          <div class="peg" style="--i:3">
-            <div class="peg-hook"></div>
-            <svg class="peg-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
-              <rect x="10" y="5" width="28" height="38" rx="3"/>
-              <path d="M10 20h28"/>
-              <path d="M16 11v5M16 26v10"/>
-            </svg>
-            <h3>Buzdolabı Tamiri</h3>
-            <p>Soğutmama, kompresör, defrost sistemi ve conta değişimi; gıda kaybı olmadan hızlı müdahale.</p>
-          </div>
-          <div class="peg" style="--i:4">
-            <div class="peg-hook"></div>
-            <svg class="peg-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
-              <rect x="7" y="7" width="34" height="34" rx="3"/>
-              <path d="M7 15h34"/>
-              <circle cx="24" cy="27" r="7"/>
-            </svg>
-            <h3>Bulaşık Makinesi Tamiri</h3>
-            <p>Isıtıcı, pompa, sensör ve sızıntı arızalarına yerinde teşhis, net fiyatlandırma.</p>
-          </div>
-          <div class="peg" style="--i:5">
-            <div class="peg-hook"></div>
-            <svg class="peg-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
-              <rect x="8" y="6" width="32" height="36" rx="3"/>
-              <rect x="14" y="12" width="20" height="14" rx="1"/>
-              <circle cx="17" cy="33" r="2" fill="currentColor" stroke="none"/>
-              <circle cx="24" cy="33" r="2" fill="currentColor" stroke="none"/>
-              <circle cx="31" cy="33" r="2" fill="currentColor" stroke="none"/>
-            </svg>
-            <h3>Fırın &amp; Ocak Tamiri</h3>
-            <p>Rezistans, termostat, ateşleme ve elektronik kart arızalarında marka fark etmeksizin servis.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ WHY US ============ -->
-  <section id="neden-biz">
-    <div class="wrap why">
       <div class="reveal">
-        <div class="section-head" style="border:none; padding:0; margin-bottom:26px;">
-          <div>
-            <div class="section-num">Neden Biz</div>
-            <h2>Servis fişi kadar net çalışırız</h2>
-          </div>
+
+        <div class="eyebrow mono">
+          <span class="eyebrow-line"></span>
+          MERSİN TEKNİK SERVİS
         </div>
-        <div class="why-list">
-          <div class="why-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 7v6c0 5 4 8 9 9 5-1 9-4 9-9V7z"/><path d="m9 12 2 2 4-4"/></svg>
-            <div><h4>Parça değişmeden önce onay</h4><p>Fiyat sürprizi yok; ne değişecekse önce söyleriz, siz onaylayınca müdahale ederiz.</p></div>
-          </div>
-          <div class="why-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 12h8M12 8v8"/></svg>
-            <div><h4>Orijinal ve marka uyumlu parça</h4><p>Değiştirdiğimiz her parça faturalı ve garantilidir, taklit parça kullanmayız.</p></div>
-          </div>
-          <div class="why-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-            <div><h4>Randevu saatine sadık kalırız</h4><p>Verdiğimiz saat aralığında geliriz; gecikme olursa önceden haber veririz.</p></div>
-          </div>
-          <div class="why-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/><path d="M12 2a10 10 0 0 1 0 20"/></svg>
-            <div><h4>İşçilikte 6 ay garanti</h4><p>Yapılan onarım aynı arıza için 6 ay boyunca ücretsiz tekrar müdahale garantisi taşır.</p></div>
-          </div>
+
+        <h1>
+          Klima<br>
+          <span>işini</span><br>
+          şansa bırakma.
+        </h1>
+
+        <p class="hero-copy">
+          Klima ve beyaz eşya servisinde hızlı müdahale,
+          titiz işçilik ve güvenilir teknik destek.
+          Mersin genelinde servis hizmeti.
+        </p>
+
+        <div class="hero-actions">
+          
+          <a href="tel:+905432029919" class="btn btn-red">
+            Servis Talebi Oluştur ↗
+          </a>
+
+          <a href="#hizmetler" class="btn btn-outline">
+            Hizmetleri İncele
+          </a>
+
         </div>
+
       </div>
 
-      <div class="why-panel reveal">
-        <h3>Aradığınız andan servisin teslimine dört adım</h3>
-        <div class="process-list">
-          <div class="process-item"><div class="process-num">01</div><p><strong>Ara ya da WhatsApp'tan yaz</strong>Arızayı kısaca anlatın, cihaz markasını belirtin.</p></div>
-          <div class="process-item"><div class="process-num">02</div><p><strong>Randevu saati alın</strong>Size en yakın uygun saat aralığını netleştiririz.</p></div>
-          <div class="process-item"><div class="process-num">03</div><p><strong>Yerinde teşhis ve onarım</strong>Usta cihazı inceler, fiyatı söyler, onaylarsanız aynı ziyarette tamamlar.</p></div>
-          <div class="process-item"><div class="process-num">04</div><p><strong>Garantili teslim</strong>Yapılan işlem yazılı garantiyle, fişi elinize verilerek kapanır.</p></div>
+
+      <div class="hero-visual reveal">
+
+        <div class="visual-frame">
+
+          <div class="ac-unit"></div>
+
+          <div class="air"></div>
+          <div class="air"></div>
+          <div class="air"></div>
+
         </div>
+
+        <div class="visual-label">
+          <strong>Hızlı.</strong>
+          <small>Doğru teşhis · Temiz işçilik</small>
+        </div>
+
       </div>
+
     </div>
+
   </section>
 
-  <!-- ============ SERVICE AREA / MAP ============ -->
-  <section id="bolge">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div>
-          <div class="section-num">Hizmet Bölgesi</div>
-          <h2>Mersin genelinde yerinde servis</h2>
-        </div>
-        <p>Merkez ilçelerde aynı gün, çevre ilçelerde randevulu servis sağlıyoruz.</p>
+
+  <!-- TRUST -->
+
+  <div class="trust">
+
+    <div class="container trust-inner">
+
+      <div class="trust-item">
+        <strong>01</strong> Klima Servisi
       </div>
-      <div class="area reveal">
-        <div class="map-frame">
-          <iframe
-            src="https://www.google.com/maps?q=Yeni%C5%9Fehir,Mersin&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Yavuz Klima Beyaz Eşya Özel Servis konum haritası">
-          </iframe>
+
+      <div class="trust-item">
+        <strong>02</strong> Montaj & Kurulum
+      </div>
+
+      <div class="trust-item">
+        <strong>03</strong> Beyaz Eşya Onarımı
+      </div>
+
+      <div class="trust-item">
+        <strong>04</strong> 2. El / Spot Alım-Satım
+      </div>
+
+      <div class="trust-item">
+        <strong>05</strong> Mersin Geneli
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- SERVICES -->
+
+  <section id="hizmetler">
+
+    <div class="container">
+
+      <div class="section-head reveal">
+
+        <div class="section-index mono">
+          01 / HİZMETLER
         </div>
-        <div class="area-side">
+
+        <h2 class="section-title">
+          Sorunu bul.<br>
+          <span>Doğru müdahaleyi yap.</span>
+        </h2>
+
+      </div>
+
+      <!-- MAIN SERVICES HERO CARDS -->
+      <div class="services">
+
+        <article class="service service-big reveal">
           <div>
-            <h4 style="font-family:var(--font-display); font-size:1.3rem; font-weight:700;">Kuvayi Milliye Cad. No: 45, Yenişehir / Mersin</h4>
-            <div class="chip-row">
-              <span class="chip">Yenişehir</span>
-              <span class="chip">Mezitli</span>
-              <span class="chip">Toroslar</span>
-              <span class="chip">Akdeniz</span>
-              <span class="chip">Tarsus</span>
-              <span class="chip">Erdemli</span>
+            <div class="service-number mono">
+              SERVICE / 01
             </div>
-            <div class="area-note">Bölgenizi görmüyor musunuz? Yine de arayın — çoğu zaman aynı gün içinde planlayabiliyoruz.</div>
+            <div class="service-icon" style="margin-top:35px;">
+              ❄
+            </div>
+          </div>
+          <div>
+            <h3>Klima Servisi</h3>
+            <p>
+              Klima çalışmıyor, yeterince soğutmuyor veya performansı düştü mü?
+              Arıza tespiti, bakım ve onarım işlemlerini cihazın durumuna göre
+              gerçekleştiriyoruz.
+            </p>
+            <a href="tel:+905432029919" class="service-link">
+              Servis talep et
+              <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <div class="service-side">
+          <article class="service service-small reveal">
+            <div class="service-number mono">
+              SERVICE / 02
+            </div>
+            <div class="service-icon" style="margin-top:25px;">
+              +
+            </div>
+            <h3>Montaj & Kurulum</h3>
+            <p>
+              Yeni klimanız veya beyaz eşyanız için doğru konumlandırma ve profesyonel kurulum.
+            </p>
+          </article>
+
+          <article class="service service-small reveal">
+            <div class="service-number mono">
+              SERVICE / 03
+            </div>
+            <div class="service-icon" style="margin-top:25px;">
+              ◌
+            </div>
+            <h3>Kapsamlı Onarım</h3>
+            <p>
+              Buzdolabı, çamaşır ve bulaşık makineleriniz için profesyonel parça değişimi ve tamir.
+            </p>
+          </article>
+        </div>
+
+      </div>
+
+
+      <!-- EXTENDED SEO SERVICES -->
+      <div class="seo-categories reveal">
+
+        <div class="seo-categories-head">
+          <h3>Kapsamlı Teknik Servis Çözümlerimiz</h3>
+          <p>Mersin genelinde ihtiyaç duyduğunuz tüm ısıtma, soğutma ve beyaz eşya problemlerinizde, uzman kadromuz ve donanımlı araçlarımızla profesyonel onarım ve bakım sunuyoruz.</p>
+        </div>
+
+        <!-- Klima -->
+        <div class="category-block">
+          <h4>Klima Hizmetleri</h4>
+          <div class="seo-grid">
+            <div class="seo-card">
+              <h5>Klima Tamiri</h5>
+              <p>Soğutmayan, su akıtan, ses yapan, fan motoru, kart veya kompresör arızası bulunan klimalarda arıza tespiti ve onarım işlemleri gerçekleştiriyoruz. Mezitli, Toroslar ve tüm Mersin'de hizmetinizdeyiz.</p>
+            </div>
+            <div class="seo-card">
+              <h5>Klima Periyodik Bakım ve Temizliği</h5>
+              <p>Klima filtre temizliği, iç ve dış ünite bakımı, performans kontrolü ve hijyenik temizlik işlemleri. Daha verimli çalışma ve temiz hava için Mersin genelinde destek sağlıyoruz.</p>
+            </div>
+            <div class="seo-card">
+              <h5>Klima Gaz Dolumu ve Kaçak Tespiti</h5>
+              <p>Yeterli soğutma yapmayan veya gaz kaçağı şüphesi olan klimalarda profesyonel kaçak kontrolü ve gaz dolumu. Mezitli, Toroslar ve çevre ilçelere servis imkanı.</p>
+            </div>
+            <div class="seo-card">
+              <h5>Klima Montajı ve Kurulumu</h5>
+              <p>Yeni klima kurulumu, sökme, yeniden montaj ve yer değişimi. Arçelik, Samsung, Vestel, Baymak, LG, Airfel ve diğer markalar için montaj desteği.</p>
+            </div>
+            <div class="seo-card">
+              <h5>Klima Söküm (Demontajı) İşlemi</h5>
+              <p>Taşınma, yer değişikliği veya yeniden montaj öncesinde klimaların güvenli şekilde sökülmesini sağlıyoruz. Profesyonel söküm hizmetimiz tüm Mersin'i kapsar.</p>
+            </div>
+            <div class="seo-card">
+              <h5>Klima Su Akıtma Tamiri</h5>
+              <p>İç ve dış üniteden su damlatma, drenaj tıkanıklığı, tahliye hortumu sorunlarında arıza tespiti ve onarım yapıyoruz. Arçelik, Vestel, Beko vb. klimalara servis.</p>
+            </div>
+            <div class="seo-card">
+              <h5>Klima Anakart Tamiri</h5>
+              <p>Salon ve duvar tipi klima dış ünite anakart sökme ve onarımı. Vestel, Samsung, Toshiba, Baymak, Beko, Bosch için avantajlı anakart tamir fiyatları.</p>
+            </div>
+            <div class="seo-card">
+              <h5>Klima Kompresör Değişimi</h5>
+              <p>Kompresör arızası, kilitlenme ve devreye girmeme sorunları yerinde teşhis edilir. Uygun fiyat garantisiyle kısmi tamir veya komple kompresör değişimi.</p>
+            </div>
           </div>
         </div>
+
+        <!-- Buzdolabı -->
+        <div class="category-block">
+          <h4>Buzdolabı & Derin Dondurucu</h4>
+          <div class="seo-grid">
+            <div class="seo-card">
+              <h5>Buzdolabı Motor (Kompresör) Değişimi</h5>
+              <p>Soğutmayan veya motor çalışmayan buzdolaplarında profesyonel teşhis ve kompresör değişimi. Tüm markalar için Mersin'de teknik servis sağlıyoruz.</p>
+            </div>
+            <div class="seo-card">
+              <h5>Buzdolabı Gaz Basımı ve Kaçak Tespiti</h5>
+              <p>Soğutmayan buzdolaplarında cihazlarla kaçak kontrolü, gaz dolumu ve tamir işlemleri. Arçelik, Bosch, Vestel ve diğer tüm markalara servis.</p>
+            </div>
+            <div class="seo-card">
+              <h5>Buzdolabı Kapı Lastiği (Contası) Değişimi</h5>
+              <p>Soğuk kaçıran, tam kapanmayan veya lastiği deforme olan buzdolaplarında profesyonel conta değişimi ile hızlı servis desteği.</p>
+            </div>
+            <div class="seo-card">
+              <h5>Buzdolabı Termostat Arızası Onarımı</h5>
+              <p>Sürekli çalışan, yeterince soğutmayan veya düzensiz soğutan cihazlarda termostat arızalarını tespit edip değiştiriyoruz. Siemens, Beko, Bosch dahil.</p>
+            </div>
+            <div class="seo-card">
+              <h5>Derin Dondurucu Tamiri</h5>
+              <p>Soğutmayan, kart arızası olan veya gaz delik sorunu yaşayan derin dondurucular için onarım. Uğur, Arçelik, Vestel ve diğer markalara hizmet veriyoruz.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Çamaşır -->
+        <div class="category-block">
+          <h4>Çamaşır & Kurutma Makinesi</h4>
+          <div class="seo-grid">
+            <div class="seo-card">
+              <h5>Çamaşır Makinesi Rulman ve Keçe Değişimi</h5>
+              <p>Ses ve rutubet kokusu sorunları için Bosch, Samsung, LG, Vestel vb. markalarda rulman keçe takımı ve amortisör değişimi yapıyoruz. Bütçe dostu fiyatlar.</p>
+            </div>
+            <div class="seo-card">
+              <h5>Çamaşır Makinesi Motor Kömürü Değişimi</h5>
+              <p>Motor arızası ve hız kontrol sorunlarına karşı orijinal yedek parça ile Siemens, Profilo, Hoover gibi cihazlarda motor kömürü değişimi.</p>
+            </div>
+            <div class="seo-card">
+              <h5>Çamaşır Makinesi Su Boşaltma Pompası Tamiri</h5>
+              <p>Makine su boşaltırken ses çıkarıyor veya su tıkalı sorunu yaşıyorsanız; pompa, kapak ve hortum tamirini uzman desteğiyle yapıyoruz.</p>
+            </div>
+            <div class="seo-card">
+              <h5>Kurutma Makinesi Bakımı ve Tamiri</h5>
+              <p>Cihaz tam kurutmuyor veya tambur dönmüyorsa yıllık bakım ve onarım. Bosch, Arçelik, Electrolux vb. cihazlarda uygun bakım ücretleriyle garantili çözüm.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bulaşık -->
+        <div class="category-block">
+          <h4>Bulaşık Makinesi</h4>
+          <div class="seo-grid">
+            <div class="seo-card">
+              <h5>Bulaşık Makinesi Tamiri</h5>
+              <p>Su almama, yıkamama, su boşaltmama, sesli çalışma arızalarında tespit ve onarım desteği. Mezitli, Toroslar ve tüm Mersin'de bulaşık makinesi tamircisi.</p>
+            </div>
+            <div class="seo-card">
+              <h5>Bulaşık Makinesi Isıtıcı (Rezistans) Değişimi</h5>
+              <p>Suyu ısıtmayan, yıkama sonunda soğuk kalan cihazlarda rezistans değişimi. Bosch, Siemens, Samsung, Profilo ve diğer modellere yönelik hizmet.</p>
+            </div>
+            <div class="seo-card">
+              <h5>Bulaşık Makinesi Su Boşaltma Arızası Onarımı</h5>
+              <p>Suyu tahliye etmeyen veya boşaltmada takılı kalan bulaşık makinelerinde arıza tespiti ve onarımı. Arçelik, Beko ve Bosch markalarına servis desteği.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beyaz Eşya & İkinci El -->
+        <div class="category-block">
+          <h4>Beyaz Eşya Genel & 2. El / Spot</h4>
+          <div class="seo-grid">
+            <div class="seo-card">
+              <h5>Beyaz Eşya Kurulum ve Montajı</h5>
+              <p>Bosch, Siemens, Samsung, Vestel, Regal, Altus vb. marka ürünlerinizin kurulumunu yapıyor, güvenli şekilde kullanıma hazır hale getiriyoruz.</p>
+            </div>
+            <div class="seo-card">
+              <h5>Beyaz Eşya Arıza Tespiti</h5>
+              <p>Çamaşır makinesi, buzdolabı ve diğer beyaz eşyalarda oluşan sorunları yerinde kontrol ederek arızanın kaynağını kesin olarak belirliyoruz.</p>
+            </div>
+            <div class="seo-card">
+              <h5>Beyaz Eşya Anakart Tamiri</h5>
+              <p>Elektronik kart ve yanmış anakart sorunları için onarım hizmeti. Tüm beyaz eşyalarınız için Mersin'in her ilçesine anakart destek hizmeti sağlıyoruz.</p>
+            </div>
+            <div class="seo-card">
+              <h5>Evden 2. El Beyaz Eşya Alımı</h5>
+              <p>Kullanılmış buzdolabı, çamaşır makinesi ve bulaşık makinelerinizi adresinizden alıyor, değerinde fiyatlandırma yapıyoruz.</p>
+            </div>
+            <div class="seo-card">
+              <h5>Spot Beyaz Eşya Alım Satımı</h5>
+              <p>Uygun fiyatlı spot ürün seçenekleri sunuyor, kullanılabilir durumdaki beyaz eşyalarınızı değerinde satın alıyoruz. Mezitli ve tüm Mersin'e hizmet.</p>
+            </div>
+            <div class="seo-card">
+              <h5>Garantili 2. El Beyaz Eşya Satışı</h5>
+              <p>Kontrol ve test edilmiş buzdolabı, çamaşır makinesi gibi cihazları garanti kapsamında sunuyoruz. Güvenilir ikinci el ve spot beyaz eşya çözümleri.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
+
     </div>
+
   </section>
 
-  <!-- ============ TESTIMONIALS ============ -->
-  <section>
-    <div class="wrap">
+
+  <!-- PROCESS -->
+
+  <section id="surec">
+
+    <div class="container">
+
       <div class="section-head reveal">
-        <div>
-          <div class="section-num">Müşteri Notları</div>
-          <h2>Fişin arkasına yazdıkları</h2>
+
+        <div class="section-index mono">
+          02 / SÜREÇ
         </div>
+
+        <h2 class="section-title">
+          Servis süreci<br>
+          <span>gereksiz uzamasın.</span>
+        </h2>
+
       </div>
-      <div class="tickets reveal">
-        <div class="ticket">
-          <p class="ticket-quote">Buzdolabımız gece bozuldu, sabah aradık öğleden önce usta kapımızdaydı. Kompresör değişti, hâlâ sorunsuz çalışıyor.</p>
-          <div class="ticket-meta"><span>Sevgi H.</span><span>Yenişehir</span></div>
+
+
+      <div class="process-grid">
+
+        <div class="step reveal">
+          <span class="step-number mono">01</span>
+          <span class="step-dot"></span>
+
+          <h3>Talep</h3>
+
+          <p>
+            Telefon veya mesaj üzerinden servis ihtiyacınızı iletiyorsunuz.
+          </p>
         </div>
-        <div class="ticket">
-          <p class="ticket-quote">Klima gaz kaçırıyordu, geldiler dolumu yaptılar; teşhis için ayrıca ücret istemediler.</p>
-          <div class="ticket-meta"><span>Barış T.</span><span>Mezitli</span></div>
+
+
+        <div class="step reveal">
+          <span class="step-number mono">02</span>
+          <span class="step-dot"></span>
+
+          <h3>Teşhis</h3>
+
+          <p>
+            Cihaz kontrol edilerek problemin kaynağı belirleniyor.
+          </p>
         </div>
-        <div class="ticket">
-          <p class="ticket-quote">Çamaşır makinesinin kapak kilidi arızasıydı, parçayı yanlarında getirdiler, aynı gün bitti.</p>
-          <div class="ticket-meta"><span>Nurcan A.</span><span>Toroslar</span></div>
+
+
+        <div class="step reveal">
+          <span class="step-number mono">03</span>
+          <span class="step-dot"></span>
+
+          <h3>Müdahale</h3>
+
+          <p>
+            Gerekli bakım, onarım veya kurulum işlemi gerçekleştiriliyor.
+          </p>
         </div>
+
+
+        <div class="step reveal">
+          <span class="step-number mono">04</span>
+          <span class="step-dot"></span>
+
+          <h3>Kontrol</h3>
+
+          <p>
+            İşlem sonrası cihazın çalışması tekrar kontrol ediliyor.
+          </p>
+        </div>
+
       </div>
+
     </div>
+
   </section>
 
-  <!-- ============ CTA BAND ============ -->
-  <section style="padding-top:0;">
-    <div class="wrap">
-      <div class="cta-band reveal">
-        <h3>Cihazınız arıza mı verdi? Aynı gün yerinde servis için hemen arayın.</h3>
-        <a class="btn-call" href="tel:+903245550142">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8.284 6.716 15 15 15l3-4-6-3-2 2a12 12 0 0 1-6-6l2-2-3-6-4 3z"/></svg>
-          0324 555 01 42
-        </a>
+
+  <!-- SERVICE AREA & CONTACT -->
+
+  <section id="bolge" class="area">
+
+    <div class="container area-grid">
+
+      <div class="reveal">
+
+        <div class="section-index mono">
+          03 / İLETİŞİM & BÖLGE
+        </div>
+
+        <h2 class="area-title">
+          Mersin.<br>
+          <span>Bizim saha.</span>
+        </h2>
+
+        <p class="area-copy">
+          Mersin'in farklı bölgelerinde klima ve beyaz eşya servis hizmeti
+          sağlıyoruz. Mezitli, Yenişehir, Akdeniz ve Toroslar başta olmak üzere
+          çevre ilçelere de servis desteği sunuyoruz.
+        </p>
+
+        <div class="districts">
+          <span class="district">MEZİTLİ</span>
+          <span class="district">YENİŞEHİR</span>
+          <span class="district">AKDENİZ</span>
+          <span class="district">TOROSLAR</span>
+          <span class="district">MERSİN</span>
+        </div>
+        
+        <div class="contact-info">
+          <div><strong>📍 Konum:</strong> Merkez mahallesi, Fındıkpınarı caddesi, 52067. Sk. No:18, 33330 Mezitli/Mersin</div>
+          <div><strong>📞 Telefon:</strong> +90 543 202 99 19</div>
+          <div><strong>🕒 Saatler:</strong> 7/24 Açık</div>
+        </div>
+
       </div>
+
+      <div class="map reveal">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.8640865969696!2d34.5209311!3d36.7498333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15278ba5f4f16013%3A0xb8b6647c6fadd430!2sYavuz%20Klima%20Beyaz%20E%C5%9Fya%20%C3%96zel%20Servis!5e0!3m2!1sen!2str!4v1790543888985!5m2!1sen!2str" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+
     </div>
+
   </section>
+
+
+  <!-- CTA -->
+
+  <section class="cta">
+
+    <div class="container">
+
+      <div class="cta-box reveal">
+
+        <div class="mono">
+          SERVİS GEREKİYORSA
+        </div>
+
+        <h2>
+          Sorunu büyütmeden<br>
+          çözmeye <span>başlayalım.</span>
+        </h2>
+        
+        <a href="tel:+905432029919" class="btn cta-white">
+          Yavuz Servis'i Ara ↗
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
 </main>
 
-<footer id="iletisim">
-  <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <div class="foot-brand">
-          <svg class="brand-mark" viewBox="0 0 40 40" fill="none">
-            <rect x="1" y="1" width="38" height="38" rx="8" stroke="rgba(244,239,224,0.35)" stroke-width="1.6"/>
-            <path d="M20 9v22M11 14l18 12M29 14L11 26" stroke="#8FD9C4" stroke-width="2" stroke-linecap="round"/>
-            <circle cx="20" cy="20" r="4" fill="#D98A46"/>
-          </svg>
-          <div class="brand-text">Yavuz Servis<span>Klima &amp; Beyaz Eşya · Mersin</span></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    
+    <div class="footer-grid">
+      
+      <!-- Marka / Logo -->
+      <div class="footer-brand">
+        <img src="logo.png" alt="Yavuz Klima Logo" class="brand-logo">
+        <p>Mersin geneli hızlı ve güvenilir klima, beyaz eşya teknik servis hizmeti. Doğru teşhis ve temiz işçilikle yanınızdayız.</p>
+      </div>
+
+      <!-- Menü -->
+      <div class="footer-col">
+        <h4>Hızlı Menü</h4>
+        <div class="footer-links">
+          <a href="#hizmetler">Hizmetler</a>
+          <a href="#surec">Nasıl Çalışır?</a>
+          <a href="#bolge">İletişim & Bölge</a>
         </div>
-        <p style="max-width:32ch; font-size:0.9rem;">Mersin ve çevresinde klima ile beyaz eşya arızalarına yerinde, garantili çözüm.</p>
       </div>
-      <div>
-        <h5>İletişim</h5>
-        <ul>
-          <li><a href="tel:+903245550142">0324 555 01 42</a></li>
-          <li><a href="https://wa.me/903245550142" target="_blank" rel="noopener">WhatsApp'tan yaz</a></li>
-          <li><a href="mailto:info@yavuzservis.example">info@yavuzservis.example</a></li>
-          <li>Kuvayi Milliye Cad. No: 45, Yenişehir / Mersin</li>
-        </ul>
+
+      <!-- İletişim -->
+      <div class="footer-col">
+        <h4>İletişim Bilgileri</h4>
+        <div class="footer-contact">
+          <span>📍 Merkez mah. Fındıkpınarı cad. 52067. Sk. No:18 Mezitli/Mersin</span>
+          <span>📞 <a href="tel:+905432029919">+90 543 202 99 19</a></span>
+          <span>🕒 7/24 Açık</span>
+        </div>
       </div>
-      <div>
-        <h5>Çalışma Saatleri</h5>
-        <ul>
-          <li>Pazartesi – Cumartesi: 08:00 – 20:00</li>
-          <li>Pazar: yalnızca acil çağrı</li>
-        </ul>
-      </div>
+
     </div>
-    <div class="foot-bottom">
-      <span>© 2026 Yavuz Klima Beyaz Eşya Özel Servis</span>
-      <span>Mersin — Yenişehir, Mezitli, Toroslar, Akdeniz, Tarsus, Erdemli</span>
+
+    <!-- Alt Kısım / Copyright -->
+    <div class="footer-bottom">
+      <span>© 2026 Yavuz Klima ve Beyaz Eşya Servis</span>
+      <span>MERSİN · TEKNİK SERVİS</span>
     </div>
+
   </div>
 </footer>
 
-<div class="fab">
-  <a class="fab-btn" href="https://wa.me/903245550142" target="_blank" rel="noopener" aria-label="WhatsApp'tan yaz">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.55L3 20l1.05-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg>
-  </a>
-</div>
 
 <script>
-  // Scroll reveal for section blocks and pegboard cards
-  const revealEls = document.querySelectorAll('.reveal, .peg');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting){
-        e.target.classList.add('in-view');
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.15 });
-  revealEls.forEach(el => io.observe(el));
 
-  // Count-up stats, triggered once when hero stats enter view
-  const statEls = document.querySelectorAll('.stat-num');
-  const countIo = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (!e.isIntersecting) return;
-      const el = e.target;
-      const target = parseInt(el.dataset.count, 10);
-      const suffix = el.dataset.suffix || '';
-      const duration = 1200;
-      const start = performance.now();
-      function tick(now){
-        const p = Math.min((now - start) / duration, 1);
-        const eased = 1 - Math.pow(1 - p, 3);
-        el.textContent = Math.round(eased * target) + suffix;
-        if (p < 1) requestAnimationFrame(tick);
+  /* Navbar */
+
+  const nav = document.getElementById("nav");
+
+  window.addEventListener("scroll", () => {
+    nav.classList.toggle("scrolled", window.scrollY > 30);
+  }, { passive: true });
+
+
+  /* Scroll reveal */
+
+  const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+
+        entry.target.classList.add("visible");
+
+        observer.unobserve(entry.target);
+
       }
-      requestAnimationFrame(tick);
-      countIo.unobserve(el);
+
     });
-  }, { threshold: 0.4 });
-  statEls.forEach(el => countIo.observe(el));
+
+  }, {
+    threshold: .12
+  });
+
+
+  document
+    .querySelectorAll(".reveal")
+    .forEach(el => observer.observe(el));
+
+
+  /* Magnetic buttons */
+
+  document
+    .querySelectorAll(".btn-red, .nav-cta")
+    .forEach(button => {
+
+      button.addEventListener("mousemove", e => {
+
+        if (window.innerWidth < 700) return;
+
+        const rect = button.getBoundingClientRect();
+
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        button.style.transform =
+          `translate(${x * .08}px, ${y * .08}px)`;
+
+      });
+
+      button.addEventListener("mouseleave", () => {
+        button.style.transform = "";
+      });
+
+    });
+
+
+  /* Service hover tilt */
+
+  document
+    .querySelectorAll(".service, .seo-card")
+    .forEach(card => {
+
+      card.addEventListener("mousemove", e => {
+
+        if (window.innerWidth < 700) return;
+
+        const rect = card.getBoundingClientRect();
+
+        const x =
+          (e.clientX - rect.left) / rect.width - .5;
+
+        const y =
+          (e.clientY - rect.top) / rect.height - .5;
+
+        card.style.transform =
+          `perspective(1000px)
+           rotateX(${y * -1.5}deg)
+           rotateY(${x * 1.5}deg)
+           translateY(-6px)`;
+
+      });
+
+      card.addEventListener("mouseleave", () => {
+        card.style.transform = "";
+      });
+
+    });
+
 </script>
+
 </body>
 </html>
