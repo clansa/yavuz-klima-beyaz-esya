@@ -518,78 +518,118 @@
       transform: translateX(6px);
     }
 
-    /* ---------------- SEO SERVICES GRID ---------------- */
-    .seo-categories {
+    /* ---------------- SEMANTIC SEO SERVICES (Doğal İçerik) ---------------- */
+    
+    .detailed-services {
       margin-top: 100px;
     }
+    
+    .detailed-head {
+      margin-bottom: 40px;
+    }
 
-    .seo-categories-head h3 {
+    .detailed-head h3 {
       font-size: 32px;
       font-weight: 600;
       letter-spacing: -.04em;
       margin-bottom: 15px;
     }
 
-    .seo-categories-head p {
+    .detailed-head p {
       color: var(--muted);
       font-size: 15px;
-      max-width: 600px;
+      max-width: 650px;
       line-height: 1.6;
-      margin-bottom: 50px;
     }
 
-    .category-block {
-      margin-bottom: 60px;
-    }
-
-    .category-block > h4 {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 25px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .category-block > h4::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      background: var(--red);
-      border-radius: 50%;
-    }
-
-    .seo-grid {
+    .detailed-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
     }
 
-    .seo-card {
+    .detailed-card {
       background: white;
+      padding: 35px;
       border: 1px solid var(--line);
-      padding: 24px;
       border-radius: 4px;
       transition: .3s;
     }
 
-    .seo-card:hover {
-      border-color: var(--red);
+    .detailed-card:hover {
+      border-color: #c9c9c6;
+      box-shadow: 0 15px 40px rgba(0,0,0,.04);
       transform: translateY(-4px);
-      box-shadow: 0 15px 30px rgba(0,0,0,.04);
     }
 
-    .seo-card h5 {
-      font-size: 15px;
+    .detailed-card h4 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 15px;
       color: var(--black);
-      margin-bottom: 10px;
+    }
+
+    .detailed-card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+      min-height: 65px;
+    }
+
+    .detailed-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .detailed-card li {
+      font-size: 13px;
+      color: #444;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
       line-height: 1.4;
     }
 
-    .seo-card p {
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.65;
+    .detailed-card li::before {
+      content: "→";
+      color: var(--red);
+      font-weight: bold;
+    }
+
+    /* Markalar Alanı */
+    .brands-section {
+      margin-top: 60px;
+      padding: 30px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+    }
+
+    .brands-section h5 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: #999;
+      margin-bottom: 20px;
+    }
+
+    .brands-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .brands-tags span {
+      background: var(--light);
+      padding: 8px 14px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--black);
+      border-radius: 30px;
+      border: 1px solid var(--line);
     }
 
     /* ---------------- PROCESS ---------------- */
@@ -932,10 +972,6 @@
       .cta-box::after {
         font-size: 250px;
       }
-
-      .seo-grid {
-        grid-template-columns: 1fr;
-      }
     }
   </style>
 
@@ -966,11 +1002,8 @@
       "Klima Servisi",
       "Klima Montajı",
       "Klima Bakımı",
-      "Klima Onarımı",
-      "Beyaz Eşya Servisi",
-      "Buzdolabı Tamiri",
-      "Çamaşır Makinesi Tamiri",
-      "Bulaşık Makinesi Tamiri"
+      "Beyaz Eşya Arıza Tespiti ve Onarımı",
+      "İkinci El Eşya Alım Satım"
     ]
   }
   </script>
@@ -1023,7 +1056,7 @@
         <p class="hero-copy">
           Klima ve beyaz eşya servisinde hızlı müdahale,
           titiz işçilik ve güvenilir teknik destek.
-          Mersin genelinde servis hizmeti.
+          Tüm Mersin'de garantili çözüm merkezi.
         </p>
 
         <div class="hero-actions">
@@ -1040,24 +1073,17 @@
 
       </div>
 
-
       <div class="hero-visual reveal">
-
         <div class="visual-frame">
-
           <div class="ac-unit"></div>
-
           <div class="air"></div>
           <div class="air"></div>
           <div class="air"></div>
-
         </div>
-
         <div class="visual-label">
           <strong>Hızlı.</strong>
           <small>Doğru teşhis · Temiz işçilik</small>
         </div>
-
       </div>
 
     </div>
@@ -1068,31 +1094,23 @@
   <!-- TRUST -->
 
   <div class="trust">
-
     <div class="container trust-inner">
-
       <div class="trust-item">
         <strong>01</strong> Klima Servisi
       </div>
-
       <div class="trust-item">
         <strong>02</strong> Montaj & Kurulum
       </div>
-
       <div class="trust-item">
         <strong>03</strong> Beyaz Eşya Onarımı
       </div>
-
       <div class="trust-item">
         <strong>04</strong> 2. El / Spot Alım-Satım
       </div>
-
       <div class="trust-item">
         <strong>05</strong> Mersin Geneli
       </div>
-
     </div>
-
   </div>
 
 
@@ -1103,16 +1121,11 @@
     <div class="container">
 
       <div class="section-head reveal">
-
-        <div class="section-index mono">
-          01 / HİZMETLER
-        </div>
-
+        <div class="section-index mono">01 / HİZMETLER</div>
         <h2 class="section-title">
           Sorunu bul.<br>
           <span>Doğru müdahaleyi yap.</span>
         </h2>
-
       </div>
 
       <!-- MAIN SERVICES HERO CARDS -->
@@ -1120,202 +1133,132 @@
 
         <article class="service service-big reveal">
           <div>
-            <div class="service-number mono">
-              SERVICE / 01
-            </div>
-            <div class="service-icon" style="margin-top:35px;">
-              ❄
-            </div>
+            <div class="service-number mono">SERVICE / 01</div>
+            <div class="service-icon" style="margin-top:35px;">❄</div>
           </div>
           <div>
             <h3>Klima Servisi</h3>
             <p>
-              Klima çalışmıyor, yeterince soğutmuyor veya performansı düştü mü?
-              Arıza tespiti, bakım ve onarım işlemlerini cihazın durumuna göre
-              gerçekleştiriyoruz.
+              Klimanız soğutmuyor, su akıtıyor veya performansı mı düştü? 
+              Arıza tespiti, periyodik temizlik ve onarım işlemlerini cihazın durumuna göre profesyonelce çözüyoruz.
             </p>
             <a href="tel:+905432029919" class="service-link">
-              Servis talep et
-              <span>→</span>
+              Servis talep et <span>→</span>
             </a>
           </div>
         </article>
 
         <div class="service-side">
           <article class="service service-small reveal">
-            <div class="service-number mono">
-              SERVICE / 02
-            </div>
-            <div class="service-icon" style="margin-top:25px;">
-              +
-            </div>
+            <div class="service-number mono">SERVICE / 02</div>
+            <div class="service-icon" style="margin-top:25px;">+</div>
             <h3>Montaj & Kurulum</h3>
-            <p>
-              Yeni klimanız veya beyaz eşyanız için doğru konumlandırma ve profesyonel kurulum.
-            </p>
+            <p>Taşınma veya yer değişikliği sonrası yeni klimanız ya da beyaz eşyanız için profesyonel kurulum ve demontaj sağlıyoruz.</p>
           </article>
 
           <article class="service service-small reveal">
-            <div class="service-number mono">
-              SERVICE / 03
-            </div>
-            <div class="service-icon" style="margin-top:25px;">
-              ◌
-            </div>
+            <div class="service-number mono">SERVICE / 03</div>
+            <div class="service-icon" style="margin-top:25px;">◌</div>
             <h3>Kapsamlı Onarım</h3>
-            <p>
-              Buzdolabı, çamaşır ve bulaşık makineleriniz için profesyonel parça değişimi ve tamir.
-            </p>
+            <p>Buzdolabı, çamaşır ve bulaşık makinelerinizdeki mekanik ve elektronik arızaları garantili yedek parçalarla gideriyoruz.</p>
           </article>
         </div>
 
       </div>
 
 
-      <!-- EXTENDED SEO SERVICES -->
-      <div class="seo-categories reveal">
+      <!-- SEMANTIC SEO: DOĞAL VE KULLANICI ODAKLI HİZMET DETAYLARI -->
+      <div class="detailed-services reveal">
 
-        <div class="seo-categories-head">
-          <h3>Kapsamlı Teknik Servis Çözümlerimiz</h3>
-          <p>Mersin genelinde ihtiyaç duyduğunuz tüm ısıtma, soğutma ve beyaz eşya problemlerinizde, uzman kadromuz ve donanımlı araçlarımızla profesyonel onarım ve bakım sunuyoruz.</p>
+        <div class="detailed-head">
+          <h3>Hangi Sorunları Çözüyoruz?</h3>
+          <p>Sadece cihazınızı tamir etmekle kalmıyor, sorunun kaynağını bularak kalıcı çözümler üretiyoruz. Karşılaştığınız problemlere göre sunduğumuz profesyonel müdahaleler:</p>
         </div>
 
-        <!-- Klima -->
-        <div class="category-block">
-          <h4>Klima Hizmetleri</h4>
-          <div class="seo-grid">
-            <div class="seo-card">
-              <h5>Klima Tamiri</h5>
-              <p>Soğutmayan, su akıtan, ses yapan, fan motoru, kart veya kompresör arızası bulunan klimalarda arıza tespiti ve onarım işlemleri gerçekleştiriyoruz. Mezitli, Toroslar ve tüm Mersin'de hizmetinizdeyiz.</p>
-            </div>
-            <div class="seo-card">
-              <h5>Klima Periyodik Bakım ve Temizliği</h5>
-              <p>Klima filtre temizliği, iç ve dış ünite bakımı, performans kontrolü ve hijyenik temizlik işlemleri. Daha verimli çalışma ve temiz hava için Mersin genelinde destek sağlıyoruz.</p>
-            </div>
-            <div class="seo-card">
-              <h5>Klima Gaz Dolumu ve Kaçak Tespiti</h5>
-              <p>Yeterli soğutma yapmayan veya gaz kaçağı şüphesi olan klimalarda profesyonel kaçak kontrolü ve gaz dolumu. Mezitli, Toroslar ve çevre ilçelere servis imkanı.</p>
-            </div>
-            <div class="seo-card">
-              <h5>Klima Montajı ve Kurulumu</h5>
-              <p>Yeni klima kurulumu, sökme, yeniden montaj ve yer değişimi. Arçelik, Samsung, Vestel, Baymak, LG, Airfel ve diğer markalar için montaj desteği.</p>
-            </div>
-            <div class="seo-card">
-              <h5>Klima Söküm (Demontajı) İşlemi</h5>
-              <p>Taşınma, yer değişikliği veya yeniden montaj öncesinde klimaların güvenli şekilde sökülmesini sağlıyoruz. Profesyonel söküm hizmetimiz tüm Mersin'i kapsar.</p>
-            </div>
-            <div class="seo-card">
-              <h5>Klima Su Akıtma Tamiri</h5>
-              <p>İç ve dış üniteden su damlatma, drenaj tıkanıklığı, tahliye hortumu sorunlarında arıza tespiti ve onarım yapıyoruz. Arçelik, Vestel, Beko vb. klimalara servis.</p>
-            </div>
-            <div class="seo-card">
-              <h5>Klima Anakart Tamiri</h5>
-              <p>Salon ve duvar tipi klima dış ünite anakart sökme ve onarımı. Vestel, Samsung, Toshiba, Baymak, Beko, Bosch için avantajlı anakart tamir fiyatları.</p>
-            </div>
-            <div class="seo-card">
-              <h5>Klima Kompresör Değişimi</h5>
-              <p>Kompresör arızası, kilitlenme ve devreye girmeme sorunları yerinde teşhis edilir. Uygun fiyat garantisiyle kısmi tamir veya komple kompresör değişimi.</p>
-            </div>
+        <div class="detailed-grid">
+          
+          <!-- Klima Arızaları -->
+          <div class="detailed-card">
+            <h4>Klima Arızaları</h4>
+            <p>Klimanız yeterince soğutmuyor, iç üniteden su damlatıyor veya olağandışı sesler mi çıkarıyor?</p>
+            <ul>
+              <li>Performans kaybı için gaz dolumu ve kaçak tespiti</li>
+              <li>Anakart ve kompresör (motor) değişimi</li>
+              <li>Filtre temizliği ve periyodik bakım</li>
+              <li>Drenaj tıkanıklığı ve su sızdırma onarımı</li>
+            </ul>
           </div>
-        </div>
 
-        <!-- Buzdolabı -->
-        <div class="category-block">
-          <h4>Buzdolabı & Derin Dondurucu</h4>
-          <div class="seo-grid">
-            <div class="seo-card">
-              <h5>Buzdolabı Motor (Kompresör) Değişimi</h5>
-              <p>Soğutmayan veya motor çalışmayan buzdolaplarında profesyonel teşhis ve kompresör değişimi. Tüm markalar için Mersin'de teknik servis sağlıyoruz.</p>
-            </div>
-            <div class="seo-card">
-              <h5>Buzdolabı Gaz Basımı ve Kaçak Tespiti</h5>
-              <p>Soğutmayan buzdolaplarında cihazlarla kaçak kontrolü, gaz dolumu ve tamir işlemleri. Arçelik, Bosch, Vestel ve diğer tüm markalara servis.</p>
-            </div>
-            <div class="seo-card">
-              <h5>Buzdolabı Kapı Lastiği (Contası) Değişimi</h5>
-              <p>Soğuk kaçıran, tam kapanmayan veya lastiği deforme olan buzdolaplarında profesyonel conta değişimi ile hızlı servis desteği.</p>
-            </div>
-            <div class="seo-card">
-              <h5>Buzdolabı Termostat Arızası Onarımı</h5>
-              <p>Sürekli çalışan, yeterince soğutmayan veya düzensiz soğutan cihazlarda termostat arızalarını tespit edip değiştiriyoruz. Siemens, Beko, Bosch dahil.</p>
-            </div>
-            <div class="seo-card">
-              <h5>Derin Dondurucu Tamiri</h5>
-              <p>Soğutmayan, kart arızası olan veya gaz delik sorunu yaşayan derin dondurucular için onarım. Uğur, Arçelik, Vestel ve diğer markalara hizmet veriyoruz.</p>
-            </div>
+          <!-- Buzdolabı Arızaları -->
+          <div class="detailed-card">
+            <h4>Buzdolabı & Derin Dondurucu</h4>
+            <p>Yiyecekleriniz bozulmaya mı başladı? Cihazınız altından su akıtıyor veya hiç durmadan çalışıyorsa müdahale şarttır.</p>
+            <ul>
+              <li>Motor (kompresör) kilitlenmesi ve yenileme</li>
+              <li>Soğuk kaçaklarını önleyen kapı contası (lastiği) değişimi</li>
+              <li>Termostat onarımı ile dengeli soğutma</li>
+              <li>Sistemdeki delik onarımı ve gaz basımı</li>
+            </ul>
           </div>
-        </div>
 
-        <!-- Çamaşır -->
-        <div class="category-block">
-          <h4>Çamaşır & Kurutma Makinesi</h4>
-          <div class="seo-grid">
-            <div class="seo-card">
-              <h5>Çamaşır Makinesi Rulman ve Keçe Değişimi</h5>
-              <p>Ses ve rutubet kokusu sorunları için Bosch, Samsung, LG, Vestel vb. markalarda rulman keçe takımı ve amortisör değişimi yapıyoruz. Bütçe dostu fiyatlar.</p>
-            </div>
-            <div class="seo-card">
-              <h5>Çamaşır Makinesi Motor Kömürü Değişimi</h5>
-              <p>Motor arızası ve hız kontrol sorunlarına karşı orijinal yedek parça ile Siemens, Profilo, Hoover gibi cihazlarda motor kömürü değişimi.</p>
-            </div>
-            <div class="seo-card">
-              <h5>Çamaşır Makinesi Su Boşaltma Pompası Tamiri</h5>
-              <p>Makine su boşaltırken ses çıkarıyor veya su tıkalı sorunu yaşıyorsanız; pompa, kapak ve hortum tamirini uzman desteğiyle yapıyoruz.</p>
-            </div>
-            <div class="seo-card">
-              <h5>Kurutma Makinesi Bakımı ve Tamiri</h5>
-              <p>Cihaz tam kurutmuyor veya tambur dönmüyorsa yıllık bakım ve onarım. Bosch, Arçelik, Electrolux vb. cihazlarda uygun bakım ücretleriyle garantili çözüm.</p>
-            </div>
+          <!-- Çamaşır ve Kurutma -->
+          <div class="detailed-card">
+            <h4>Çamaşır Makinesi Çözümleri</h4>
+            <p>Makineniz sıkma yaparken sarsıntı yapıyor, su boşaltmıyor veya kurutma işlemi tamburda takılı mı kalıyor?</p>
+            <ul>
+              <li>Aşırı sese karşı rulman, keçe ve amortisör değişimi</li>
+              <li>Hız kontrolü için motor kömürü onarımı</li>
+              <li>Tıkanıklıklara karşı su boşaltma pompası tamiri</li>
+              <li>Kurutma makinesi yıllık tambur bakımı</li>
+            </ul>
           </div>
-        </div>
 
-        <!-- Bulaşık -->
-        <div class="category-block">
-          <h4>Bulaşık Makinesi</h4>
-          <div class="seo-grid">
-            <div class="seo-card">
-              <h5>Bulaşık Makinesi Tamiri</h5>
-              <p>Su almama, yıkamama, su boşaltmama, sesli çalışma arızalarında tespit ve onarım desteği. Mezitli, Toroslar ve tüm Mersin'de bulaşık makinesi tamircisi.</p>
-            </div>
-            <div class="seo-card">
-              <h5>Bulaşık Makinesi Isıtıcı (Rezistans) Değişimi</h5>
-              <p>Suyu ısıtmayan, yıkama sonunda soğuk kalan cihazlarda rezistans değişimi. Bosch, Siemens, Samsung, Profilo ve diğer modellere yönelik hizmet.</p>
-            </div>
-            <div class="seo-card">
-              <h5>Bulaşık Makinesi Su Boşaltma Arızası Onarımı</h5>
-              <p>Suyu tahliye etmeyen veya boşaltmada takılı kalan bulaşık makinelerinde arıza tespiti ve onarımı. Arçelik, Beko ve Bosch markalarına servis desteği.</p>
-            </div>
+          <!-- Bulaşık Makinesi -->
+          <div class="detailed-card">
+            <h4>Bulaşık Makinesi Çözümleri</h4>
+            <p>Bulaşıklarınız yıkama sonrası soğuk, kirli mi çıkıyor veya cihazınızın alt tabanında su mu birikiyor?</p>
+            <ul>
+              <li>Isınmama sorunlarına karşı rezistans değişimi</li>
+              <li>Su almama / boşaltmama arızalarında pompa kontrolü</li>
+              <li>Elektronik arızalar için anakart tamiri</li>
+              <li>Hortum ve filtre temizliği</li>
+            </ul>
           </div>
+
+          <!-- Genel ve 2. El -->
+          <div class="detailed-card">
+            <h4>Kurulum & 2. El Eşya</h4>
+            <p>Yeni aldığınız ürünlerin kurulumu ya da elinizden çıkarmak istediğiniz kullanılmış beyaz eşyalarınız için güvenilir adres.</p>
+            <ul>
+              <li>Sıfır cihazlarda güvenli ve ilk devreye alma</li>
+              <li>Spot ve 2. el eşyalarınız için değerinde nakit alım</li>
+              <li>Revizyonu yapılmış, garantili 2. el beyaz eşya satışı</li>
+              <li>Arıza tespiti ve hasarlı elektronik kart tamiri</li>
+            </ul>
+          </div>
+
         </div>
 
-        <!-- Beyaz Eşya & İkinci El -->
-        <div class="category-block">
-          <h4>Beyaz Eşya Genel & 2. El / Spot</h4>
-          <div class="seo-grid">
-            <div class="seo-card">
-              <h5>Beyaz Eşya Kurulum ve Montajı</h5>
-              <p>Bosch, Siemens, Samsung, Vestel, Regal, Altus vb. marka ürünlerinizin kurulumunu yapıyor, güvenli şekilde kullanıma hazır hale getiriyoruz.</p>
-            </div>
-            <div class="seo-card">
-              <h5>Beyaz Eşya Arıza Tespiti</h5>
-              <p>Çamaşır makinesi, buzdolabı ve diğer beyaz eşyalarda oluşan sorunları yerinde kontrol ederek arızanın kaynağını kesin olarak belirliyoruz.</p>
-            </div>
-            <div class="seo-card">
-              <h5>Beyaz Eşya Anakart Tamiri</h5>
-              <p>Elektronik kart ve yanmış anakart sorunları için onarım hizmeti. Tüm beyaz eşyalarınız için Mersin'in her ilçesine anakart destek hizmeti sağlıyoruz.</p>
-            </div>
-            <div class="seo-card">
-              <h5>Evden 2. El Beyaz Eşya Alımı</h5>
-              <p>Kullanılmış buzdolabı, çamaşır makinesi ve bulaşık makinelerinizi adresinizden alıyor, değerinde fiyatlandırma yapıyoruz.</p>
-            </div>
-            <div class="seo-card">
-              <h5>Spot Beyaz Eşya Alım Satımı</h5>
-              <p>Uygun fiyatlı spot ürün seçenekleri sunuyor, kullanılabilir durumdaki beyaz eşyalarınızı değerinde satın alıyoruz. Mezitli ve tüm Mersin'e hizmet.</p>
-            </div>
-            <div class="seo-card">
-              <h5>Garantili 2. El Beyaz Eşya Satışı</h5>
-              <p>Kontrol ve test edilmiş buzdolabı, çamaşır makinesi gibi cihazları garanti kapsamında sunuyoruz. Güvenilir ikinci el ve spot beyaz eşya çözümleri.</p>
-            </div>
+        <!-- DOĞAL MARKALAR BÖLÜMÜ -->
+        <div class="brands-section">
+          <h5>Garantili Parça ve Uzman İşçilikle Hizmet Verdiğimiz Markalar</h5>
+          <div class="brands-tags">
+            <span>Bosch</span>
+            <span>Siemens</span>
+            <span>Arçelik</span>
+            <span>Beko</span>
+            <span>Samsung</span>
+            <span>LG</span>
+            <span>Vestel</span>
+            <span>Profilo</span>
+            <span>Altus</span>
+            <span>Regal</span>
+            <span>Hoover</span>
+            <span>Electrolux</span>
+            <span>Baymak</span>
+            <span>Airfel</span>
+            <span>Toshiba</span>
+            <span>Uğur Soğutma</span>
           </div>
         </div>
 
@@ -1329,152 +1272,94 @@
   <!-- PROCESS -->
 
   <section id="surec">
-
     <div class="container">
-
       <div class="section-head reveal">
-
-        <div class="section-index mono">
-          02 / SÜREÇ
-        </div>
-
+        <div class="section-index mono">02 / SÜREÇ</div>
         <h2 class="section-title">
           Servis süreci<br>
           <span>gereksiz uzamasın.</span>
         </h2>
-
       </div>
-
-
       <div class="process-grid">
-
         <div class="step reveal">
           <span class="step-number mono">01</span>
           <span class="step-dot"></span>
-
           <h3>Talep</h3>
-
-          <p>
-            Telefon veya mesaj üzerinden servis ihtiyacınızı iletiyorsunuz.
-          </p>
+          <p>Telefon veya mesaj üzerinden servis ihtiyacınızı iletiyorsunuz.</p>
         </div>
-
-
         <div class="step reveal">
           <span class="step-number mono">02</span>
           <span class="step-dot"></span>
-
           <h3>Teşhis</h3>
-
-          <p>
-            Cihaz kontrol edilerek problemin kaynağı belirleniyor.
-          </p>
+          <p>Cihaz kontrol edilerek problemin kaynağı belirleniyor.</p>
         </div>
-
-
         <div class="step reveal">
           <span class="step-number mono">03</span>
           <span class="step-dot"></span>
-
           <h3>Müdahale</h3>
-
-          <p>
-            Gerekli bakım, onarım veya kurulum işlemi gerçekleştiriliyor.
-          </p>
+          <p>Gerekli bakım, onarım veya kurulum işlemi gerçekleştiriliyor.</p>
         </div>
-
-
         <div class="step reveal">
           <span class="step-number mono">04</span>
           <span class="step-dot"></span>
-
           <h3>Kontrol</h3>
-
-          <p>
-            İşlem sonrası cihazın çalışması tekrar kontrol ediliyor.
-          </p>
+          <p>İşlem sonrası cihazın çalışması tekrar kontrol ediliyor.</p>
         </div>
-
       </div>
-
     </div>
-
   </section>
 
 
   <!-- SERVICE AREA & CONTACT -->
 
   <section id="bolge" class="area">
-
     <div class="container area-grid">
-
       <div class="reveal">
-
-        <div class="section-index mono">
-          03 / İLETİŞİM & BÖLGE
-        </div>
-
+        <div class="section-index mono">03 / İLETİŞİM & BÖLGE</div>
         <h2 class="area-title">
           Mersin.<br>
           <span>Bizim saha.</span>
         </h2>
-
         <p class="area-copy">
-          Mersin'in farklı bölgelerinde klima ve beyaz eşya servis hizmeti
-          sağlıyoruz. Mezitli, Yenişehir, Akdeniz ve Toroslar başta olmak üzere
-          çevre ilçelere de servis desteği sunuyoruz.
+          Müşterilerimize hızlı ulaşabilmek için Mersin genelinde mobil servis araçlarımızla destek sağlıyoruz. Evinizde ya da iş yerinizde en hızlı teşhis için yanınızdayız.
         </p>
-
         <div class="districts">
           <span class="district">MEZİTLİ</span>
           <span class="district">YENİŞEHİR</span>
           <span class="district">AKDENİZ</span>
           <span class="district">TOROSLAR</span>
-          <span class="district">MERSİN</span>
+          <span class="district">MERSİN MERKEZ</span>
         </div>
         
         <div class="contact-info">
           <div><strong>📍 Konum:</strong> Merkez mahallesi, Fındıkpınarı caddesi, 52067. Sk. No:18, 33330 Mezitli/Mersin</div>
           <div><strong>📞 Telefon:</strong> +90 543 202 99 19</div>
-          <div><strong>🕒 Saatler:</strong> 7/24 Açık</div>
+          <div><strong>🕒 Saatler:</strong> 7/24 Acil Servis Desteği</div>
         </div>
-
       </div>
 
       <div class="map reveal">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.8640865969696!2d34.5209311!3d36.7498333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15278ba5f4f16013%3A0xb8b6647c6fadd430!2sYavuz%20Klima%20Beyaz%20E%C5%9Fya%20%C3%96zel%20Servis!5e0!3m2!1sen!2str!4v1790543888985!5m2!1sen!2str" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
-
     </div>
-
   </section>
 
 
   <!-- CTA -->
 
   <section class="cta">
-
     <div class="container">
-
       <div class="cta-box reveal">
-
-        <div class="mono">
-          SERVİS GEREKİYORSA
-        </div>
-
+        <div class="mono">SERVİS GEREKİYORSA</div>
         <h2>
           Sorunu büyütmeden<br>
           çözmeye <span>başlayalım.</span>
         </h2>
-        
         <a href="tel:+905432029919" class="btn cta-white">
           Yavuz Servis'i Ara ↗
         </a>
-
       </div>
-
     </div>
-
   </section>
 
 </main>
@@ -1485,13 +1370,11 @@
   <div class="container">
     
     <div class="footer-grid">
-      
       <!-- Marka / Logo -->
       <div class="footer-brand">
         <img src="logo.png" alt="Yavuz Klima Logo" class="brand-logo">
         <p>Mersin geneli hızlı ve güvenilir klima, beyaz eşya teknik servis hizmeti. Doğru teşhis ve temiz işçilikle yanınızdayız.</p>
       </div>
-
       <!-- Menü -->
       <div class="footer-col">
         <h4>Hızlı Menü</h4>
@@ -1501,7 +1384,6 @@
           <a href="#bolge">İletişim & Bölge</a>
         </div>
       </div>
-
       <!-- İletişim -->
       <div class="footer-col">
         <h4>İletişim Bilgileri</h4>
@@ -1511,7 +1393,6 @@
           <span>🕒 7/24 Açık</span>
         </div>
       </div>
-
     </div>
 
     <!-- Alt Kısım / Copyright -->
@@ -1527,34 +1408,23 @@
 <script>
 
   /* Navbar */
-
   const nav = document.getElementById("nav");
-
   window.addEventListener("scroll", () => {
     nav.classList.toggle("scrolled", window.scrollY > 30);
   }, { passive: true });
 
 
   /* Scroll reveal */
-
   const observer = new IntersectionObserver((entries) => {
-
     entries.forEach(entry => {
-
       if (entry.isIntersecting) {
-
         entry.target.classList.add("visible");
-
         observer.unobserve(entry.target);
-
       }
-
     });
-
   }, {
     threshold: .12
   });
-
 
   document
     .querySelectorAll(".reveal")
@@ -1562,62 +1432,45 @@
 
 
   /* Magnetic buttons */
-
   document
     .querySelectorAll(".btn-red, .nav-cta")
     .forEach(button => {
-
       button.addEventListener("mousemove", e => {
-
         if (window.innerWidth < 700) return;
-
         const rect = button.getBoundingClientRect();
-
         const x = e.clientX - rect.left - rect.width / 2;
         const y = e.clientY - rect.top - rect.height / 2;
-
-        button.style.transform =
-          `translate(${x * .08}px, ${y * .08}px)`;
-
+        button.style.transform = `translate(${x * .08}px, ${y * .08}px)`;
       });
-
       button.addEventListener("mouseleave", () => {
         button.style.transform = "";
       });
-
     });
 
 
   /* Service hover tilt */
-
   document
-    .querySelectorAll(".service, .seo-card")
+    .querySelectorAll(".service, .detailed-card")
     .forEach(card => {
-
       card.addEventListener("mousemove", e => {
-
         if (window.innerWidth < 700) return;
-
         const rect = card.getBoundingClientRect();
-
-        const x =
-          (e.clientX - rect.left) / rect.width - .5;
-
-        const y =
-          (e.clientY - rect.top) / rect.height - .5;
-
+        const x = (e.clientX - rect.left) / rect.width - .5;
+        const y = (e.clientY - rect.top) / rect.height - .5;
+        
+        // Tilt animasyonunu detaylı kartlarda hafiflettik ki okuması zorlaşmasın
+        let intensity = card.classList.contains('detailed-card') ? 0.7 : 1.5;
+        
         card.style.transform =
           `perspective(1000px)
-           rotateX(${y * -1.5}deg)
-           rotateY(${x * 1.5}deg)
-           translateY(-6px)`;
-
+           rotateX(${y * -intensity}deg)
+           rotateY(${x * intensity}deg)
+           translateY(-4px)`;
       });
 
       card.addEventListener("mouseleave", () => {
         card.style.transform = "";
       });
-
     });
 
 </script>
