@@ -130,7 +130,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.9;
+      opacity: 0.95;
     }
     .visual-label {
       position: absolute;
@@ -170,7 +170,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      background-image: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.95) 100%), url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=2069&auto=format&fit=crop');
+      background-image: linear-gradient(to bottom, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.92) 100%), url('kurulum.jpeg');
       background-size: cover;
       background-position: center;
     }
@@ -179,9 +179,16 @@
     .service-small {
       min-height: 243px;
       padding: 30px;
-      background-image: linear-gradient(to right, rgba(255,255,255,0.95) 40%, rgba(255,255,255,0.85) 100%), url('https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=2070&auto=format&fit=crop');
       background-size: cover;
       background-position: center right;
+    }
+
+    .service-small.service-service {
+      background-image: linear-gradient(to right, rgba(255,255,255,0.92) 40%, rgba(255,255,255,0.8) 100%), url('klima-servis.jpeg');
+    }
+
+    .service-small.service-repair {
+      background-image: linear-gradient(to right, rgba(255,255,255,0.92) 40%, rgba(255,255,255,0.8) 100%), url('kapsamli-onarim.jpeg');
     }
 
     .service-number { color: #999; }
@@ -294,7 +301,6 @@
     <div class="nav-links">
       <a href="index.html#hizmetler">Hizmetler</a>
       <a href="index.html#surec">Nasıl Çalışır?</a>
-      <!-- Yeni Galeri Linki -->
       <a href="galeri.html">Galeri</a>
       <a href="index.html#bolge">İletişim & Bölge</a>
     </div>
@@ -317,8 +323,8 @@
       </div>
       <div class="hero-visual reveal">
         <div class="visual-frame">
-          <!-- Soyut çizim yerine gerçek fotoğraf -->
-          <img class="hero-image" src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069&auto=format&fit=crop" alt="Mersin Klima Teknik Servisi">
+          <!-- Hero Görseli: kurulum.jpeg -->
+          <img class="hero-image" src="shop-front.webp" alt="Mersin Klima Teknik Servisi">
         </div>
         <div class="visual-label">
           <strong>Hızlı.</strong>
@@ -348,6 +354,7 @@
       </div>
 
       <div class="services">
+        <!-- Büyük Kart: kurulum.jpeg -->
         <article class="service service-big reveal">
           <div>
             <div class="service-number mono">SERVICE / 01</div>
@@ -361,13 +368,15 @@
         </article>
 
         <div class="service-side">
-          <article class="service service-small reveal">
+          <!-- Küçük Kart 1: klima-servis.jpeg -->
+          <article class="service service-small service-service reveal">
             <div class="service-number mono">SERVICE / 02</div>
             <div class="service-icon" style="margin-top:25px;">+</div>
             <h3>Montaj & Kurulum</h3>
             <p>Taşınma veya yer değişikliği sonrası yeni klimanız ya da beyaz eşyanız için profesyonel kurulum ve demontaj sağlıyoruz.</p>
           </article>
-          <article class="service service-small reveal">
+          <!-- Küçük Kart 2: kapsamli-onarim.jpeg -->
+          <article class="service service-small service-repair reveal">
             <div class="service-number mono">SERVICE / 03</div>
             <div class="service-icon" style="margin-top:25px;">◌</div>
             <h3>Kapsamlı Onarım</h3>
